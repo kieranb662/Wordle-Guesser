@@ -11,6 +11,10 @@
 		8958AD082818AC7700F9FE03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD072818AC7700F9FE03 /* ContentView.swift */; };
 		8958AD0A2818AC7800F9FE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD092818AC7800F9FE03 /* Assets.xcassets */; };
 		8958AD0D2818AC7800F9FE03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD0C2818AC7800F9FE03 /* Preview Assets.xcassets */; };
+		8958AD142818AC8400F9FE03 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD132818AC8400F9FE03 /* Logic.swift */; };
+		8958AD162818ACA200F9FE03 /* 5-letter-words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD152818ACA200F9FE03 /* 5-letter-words.txt */; };
+		8958AD182818B6B800F9FE03 /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD172818B6B800F9FE03 /* Controls.swift */; };
+		8958AD1A2818B77500F9FE03 /* GuessViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD192818B77500F9FE03 /* GuessViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		8958AD072818AC7700F9FE03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8958AD092818AC7800F9FE03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8958AD0C2818AC7800F9FE03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8958AD132818AC8400F9FE03 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		8958AD152818ACA200F9FE03 /* 5-letter-words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "5-letter-words.txt"; sourceTree = "<group>"; };
+		8958AD172818B6B800F9FE03 /* Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
+		8958AD192818B77500F9FE03 /* GuessViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */,
 				8958AD072818AC7700F9FE03 /* ContentView.swift */,
+				8958AD192818B77500F9FE03 /* GuessViews.swift */,
+				8958AD172818B6B800F9FE03 /* Controls.swift */,
+				8958AD132818AC8400F9FE03 /* Logic.swift */,
+				8958AD152818ACA200F9FE03 /* 5-letter-words.txt */,
 				8958AD092818AC7800F9FE03 /* Assets.xcassets */,
 				8958AD0B2818AC7800F9FE03 /* Preview Content */,
 			);
@@ -125,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8958AD162818ACA200F9FE03 /* 5-letter-words.txt in Resources */,
 				8958AD0D2818AC7800F9FE03 /* Preview Assets.xcassets in Resources */,
 				8958AD0A2818AC7800F9FE03 /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8958AD082818AC7700F9FE03 /* ContentView.swift in Sources */,
+				8958AD182818B6B800F9FE03 /* Controls.swift in Sources */,
+				8958AD142818AC8400F9FE03 /* Logic.swift in Sources */,
 				8958AD062818AC7700F9FE03 /* Wordle_GuesserApp.swift in Sources */,
+				8958AD1A2818B77500F9FE03 /* GuessViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

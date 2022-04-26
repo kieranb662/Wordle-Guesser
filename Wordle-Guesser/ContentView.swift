@@ -8,9 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var game = Game()
+    @State var isPresentingPossibleSolutions = false
+  
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+           GuessView()
+
+            Spacer()
+            
+            if game.guesses.count > 0 {
+                Button("Show Possible Solutions", action: { isPresentingPossibleSolutions = true })
+            }
+            
+            Inputs()
+               
+        }
+        .sheet(isPresented: $isPresentingPossibleSolutions, content: {
+            List {
+                ForEach(game.possibleWords(), id: \.self) { word in
+                    Text(word)
+                }
+            }
+        })
+        .padding()
+        .environmentObject(game)
     }
 }
 
