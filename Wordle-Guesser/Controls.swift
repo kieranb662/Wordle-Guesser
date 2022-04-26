@@ -12,7 +12,11 @@ struct KeyboardButton: View {
     var character: String
     
     var body: some View {
-        Button(character, action: { game.select(letter: character) })
+        Button(character, action: {
+            withAnimation(.spring().speed(1.5)) {
+                game.select(letter: character)
+            }
+        })
             .font(.headline)
             .foregroundColor(.white)
             .frame(width: 24, height: 36)
@@ -58,15 +62,33 @@ struct Keyboard: View {
     @EnvironmentObject private var game: Game
 }
 
+struct ResultButton: View {
+    var result: GuessResult
+    
+    var body: some View {
+        Button(action: {
+            withAnimation(.spring().speed(1.5)) {
+                game.addResult(result: result)
+            }
+        }) {
+            Text(result.rawValue).frame(maxWidth: .infinity)
+        }
+        .textCase(.uppercase)
+        .tint(result.color)
+        .buttonStyle(.borderedProminent)
+    }
+    
+    @EnvironmentObject private var game: Game
+}
+
 struct ResultButtons: View {
     var body: some View {
         VStack {
-            Button("Correct Position", action: { game.addResult(result: .rightPosition) })
-            Button("Wrong Position", action: { game.addResult(result: .wrongPosition) })
-            Button("Not In Word", action: { game.addResult(result: .notInWord) })
+            ResultButton(result: .rightPosition)
+            ResultButton(result: .wrongPosition)
+            ResultButton(result: .notInWord)
             Button("Reselect Letter", action: { game.letterSelected = nil })
         }
-        .buttonStyle(.borderedProminent)
     }
     
     @EnvironmentObject private var game: Game
@@ -75,12 +97,27 @@ struct ResultButtons: View {
 struct Inputs: View {
     var body: some View {
         if game.guessCurrentlyEditing.count == 5 {
-            Button("Submit Guess", action: game.submitGuess)
+  
+            Button(action: {
+                withAnimation(.spring().speed(1.5)) {
+                    game.submitGuess()
+                }
+            }) {
+                Text("Submit Guess")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
+            
         } else {
             if game.letterSelected == nil {
                 Keyboard()
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .zIndex(game.letterSelected == nil ? 1 : 0)
             } else {
+
                 ResultButtons()
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .zIndex(game.letterSelected != nil ? 1 : 0)
             }
         }
         

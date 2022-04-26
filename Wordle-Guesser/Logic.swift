@@ -66,8 +66,10 @@ func load(file named: String) -> String? {
     return content
 }
 
-enum GuessResult {
-    case notInWord, wrongPosition, rightPosition
+enum GuessResult: String {
+    case notInWord = "Not In Word"
+    case wrongPosition = "Wrong Position"
+    case rightPosition = "Correct Position"
     
     var color: Color {
         switch self {

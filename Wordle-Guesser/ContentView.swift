@@ -14,19 +14,21 @@ struct ContentView: View {
     var body: some View {
         VStack {
            GuessView()
-
-            Spacer()
             
             if game.guesses.count > 0 {
-                Button("Show Possible Solutions", action: { isPresentingPossibleSolutions = true })
+                Button("Show \(game.possibleWords().count) Possible Solutions",
+                       action: { isPresentingPossibleSolutions = true })
+                .transition(.move(edge: .leading).combined(with: .opacity))
             }
+            
+            Spacer()
             
             Inputs()
                
         }
         .sheet(isPresented: $isPresentingPossibleSolutions, content: {
             List {
-                ForEach(game.possibleWords(), id: \.self) { word in
+                ForEach(game.possibleWords().sorted(), id: \.self) { word in
                     Text(word)
                 }
             }
