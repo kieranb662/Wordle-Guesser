@@ -60,8 +60,7 @@ struct AlreadyGuessedRow: View {
     var body: some View {
         HStack {
             ForEach(0..<5) { letterIndex in
-                if index < game.guesses.count &&
-                    letterIndex < game.guesses[index].count {
+                if index < game.guesses.count && letterIndex < game.guesses[index].count {
                     LetterBox(value: game.guesses[index][letterIndex])
                 }
             }

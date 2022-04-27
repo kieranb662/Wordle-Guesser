@@ -8,7 +8,7 @@
 import SwiftUI
 import Primitives
 
-struct ContentView: View {
+struct RootView: View {
     @StateObject var game = Game()
     
     var body: some View {
@@ -51,6 +51,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().preferredColorScheme(.dark)
+        RootView().preferredColorScheme(.dark)
     }
 }
