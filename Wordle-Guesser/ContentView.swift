@@ -17,16 +17,7 @@ struct ContentView: View {
             
             HStack {
                 Spacer()
-                
-                Button("Reset", action: {
-                    game.guessCurrentlyEditing = []
-                    game.guesses = []
-                    game.letterSelected = nil
-                    RigidImpactHaptic()
-                })
-                .font(.textButton)
-                .tint(.destructiveAction)
-                .disabled(game.guesses.count == 0)
+                ResetButton()
             }
             .padding()
             
