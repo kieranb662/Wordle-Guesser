@@ -73,9 +73,9 @@ enum GuessResult: String {
     
     var color: Color {
         switch self {
-        case .notInWord: return Color(white: 0.4)
-        case .wrongPosition: return .yellow
-        case .rightPosition: return .green
+        case .notInWord: return .incorrectLetterBackground
+        case .wrongPosition: return .wrongPositionBackground
+        case .rightPosition: return .correctLetterBackground
         }
     }
 }

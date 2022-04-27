@@ -10,15 +10,15 @@ import Primitives
 
 struct KeyboardButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
-        let width = (UIScreen.main.bounds.width - 9 * 5 - 40) / 10
+        let width = (UIScreen.main.bounds.width - 9 * keyboardButtonSpacing - 2 * keyboardHorizontalPadding) / 10
         return configuration.label
-            .font(.headline)
-            .foregroundColor(.white)
+            .font(.keyboard)
+            .foregroundColor(.keyboardForeground)
             .frame(width: width, height: width * 1.5)
-            .background(Color(white: 0.2), in: RoundedRectangle(cornerRadius: 3))
+            .background(Color.keyboardBackground, in: .keyboardButtonShape)
             .scaleEffect(configuration.isPressed ? 2 : 1)
             .offset(y: configuration.isPressed ? -(width * 1.5) : 0)
-            .animation(.linear(duration: 0.1), value: configuration.isPressed)
+            .animation(.keyboardButtonExpansion, value: configuration.isPressed)
     }
 }
 
@@ -28,7 +28,7 @@ struct KeyboardButton: View {
     
     var body: some View {
         Button(character, action: {
-            withAnimation(.spring().speed(1.5)) {
+            withAnimation(.hideAndShow) {
                 game.select(letter: character)
             }
             

@@ -27,14 +27,17 @@ struct CurrentGuessRow: View {
                 } else if letterIndex == game.guessCurrentlyEditing.count {
                     
                     if let selectedLetter = game.letterSelected {
-                        Text(selectedLetter).letterBoxStyle(color: .blue)
+                        Text(selectedLetter)
+                            .letterBoxStyle(color: .selectedBoxBackground)
                         
                     } else {
-                        Color.blue.squareAspectRatio()
+                        Color.selectedBoxBackground
+                            .squareAspectRatio()
                     }
                   
                 } else {
-                    Color(white: 0.6).squareAspectRatio()
+                    Color.unfilledGuessBackground
+                        .squareAspectRatio()
                 }
             }
         }
@@ -45,14 +48,14 @@ struct CurrentGuessRow: View {
 
 extension View {
     func squareAspectRatio() -> some View {
-        return frame(maxWidth: 200, maxHeight: .infinity)
+        return frame(maxWidth: maxLetterBoxSize, maxHeight: .infinity)
             .aspectRatio(1, contentMode: .fit)
             
     }
     
     func letterBoxStyle(color: Color) -> some View {
-        return font(.title)
-            .foregroundColor(.white)
+        return font(.letterBox)
+            .foregroundColor(.letterBoxForeground)
             .squareAspectRatio()
             .background(color)
     }
@@ -87,7 +90,7 @@ struct GuessRow: View {
             HStack {
                 ForEach(0..<5) { _ in
                     Rectangle()
-                        .stroke(Color.gray)
+                        .stroke(Color.emptyGuessRowStroke)
                         .squareAspectRatio()
                 }
             }

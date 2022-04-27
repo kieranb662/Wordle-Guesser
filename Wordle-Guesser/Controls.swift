@@ -11,7 +11,7 @@ import Primitives
 struct KeyboardRow: View {
     var characters: String
     var body: some View {
-        HStack(spacing: 5) {
+        HStack(spacing: keyboardButtonSpacing) {
             ForEach(characters.filter({_ in true}), id: \.self) { char in
                 KeyboardButton(character: String(char))
             }
@@ -25,22 +25,24 @@ struct Keyboard: View {
     let bottomRow = "zxcvbnm"
     
     var body: some View {
-        VStack(spacing: 5) {
+        VStack(spacing: keyboardButtonSpacing) {
             
             KeyboardRow(characters: topRow)
             KeyboardRow(characters: middleRow)
             
-            HStack(spacing: 5) {
+            HStack(spacing: keyboardButtonSpacing) {
                 KeyboardRow(characters: bottomRow)
                 
                 Button(action: {
-                    _ = game.guessCurrentlyEditing.removeLast()
+                    withAnimation(.hideAndShow) {
+                        _ = game.guessCurrentlyEditing.removeLast()
+                    }
+                
                     LightImpactHaptic()
                 }) {
-                    Image(systemName: "delete.left")
+                    Image.backspace
                 }
                 .disabled(game.guessCurrentlyEditing.isEmpty)
-                .padding([.trailing])
                 .buttonStyle(KeyboardButtonStyle())
             }
         }
@@ -54,15 +56,17 @@ struct ResultButton: View {
     
     var body: some View {
         Button(action: {
-            withAnimation(.spring().speed(1.5)) {
+            withAnimation(.hideAndShow) {
                 game.addResult(result: result)
             }
             
             SelectionHaptic()
         }) {
             Text(result.rawValue)
+                .font(.resultButton)
+                .foregroundColor(.resultButtonForeground)
                 .frame(maxWidth: .infinity)
-                .frame(height: 36)
+                .frame(height: resultButtonHeight)
         }
         .textCase(.uppercase)
         .tint(result.color)
@@ -74,16 +78,18 @@ struct ResultButton: View {
 
 struct ResultButtons: View {
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: resultButtonSpacing) {
             ResultButton(result: .rightPosition)
             ResultButton(result: .wrongPosition)
             ResultButton(result: .notInWord)
+            
             Button("Reselect Letter", action: {
-                withAnimation(.spring().speed(1.5)) {
+                withAnimation(.hideAndShow) {
                     game.letterSelected = nil
                 }
                 ErrorHaptic()
             })
+            .font(.resultButton)
         }
     }
     
@@ -95,25 +101,28 @@ struct Inputs: View {
         if game.guessCurrentlyEditing.count == 5 {
   
             Button(action: {
-                withAnimation(.spring().speed(1.5)) {
+                withAnimation(.hideAndShow) {
                     game.submitGuess()
                 }
                 SuccessHaptic()
             }) {
                 Text("Submit Guess")
+                    .font(.resultButton)
                     .frame(maxWidth: .infinity)
+                    .frame(height: submitButtonHeight)
             }
+            .tint(.selectedBoxBackground)
             .buttonStyle(.borderedProminent)
             
         } else {
             if game.letterSelected == nil {
                 Keyboard()
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .transition(.moveDownAndFade)
                     .zIndex(game.letterSelected == nil ? 1 : 0)
             } else {
 
                 ResultButtons()
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .transition(.moveDownAndFade)
                     .zIndex(game.letterSelected != nil ? 1 : 0)
             }
         }

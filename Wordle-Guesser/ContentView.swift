@@ -24,7 +24,8 @@ struct ContentView: View {
                     game.letterSelected = nil
                     RigidImpactHaptic()
                 })
-                .tint(.red)
+                .font(.textButton)
+                .tint(.destructiveAction)
                 .disabled(game.guesses.count == 0)
             }
             .padding()
@@ -35,15 +36,18 @@ struct ContentView: View {
             if let nextBestGuess = game.nextBestGuess() {
                 HStack {
                     Text("Best Next Guess:")
+                        .font(.label)
+                    
                     Spacer()
+                    
                     Text(nextBestGuess)
-                        .foregroundColor(.white)
-                        .font(.headline)
+                        .foregroundColor(.bestGuessForeground)
+                        .font(.bestGuess)
                         .padding(4)
-                        .background(Color.pink, in: RoundedRectangle(cornerRadius: 3))
+                        .background(Color.bestGuessBackground, in: .bestGuessShape)
                 }
-                .font(.title)
                 .padding()
+                .transition(.moveLeftAndFade)
             }
             
             if game.guesses.count > 0 {
@@ -51,7 +55,8 @@ struct ContentView: View {
                     isPresentingPossibleSolutions = true
                     SelectionHaptic()
                 }
-                .transition(.move(edge: .leading).combined(with: .opacity))
+                .font(.textButton)
+                .transition(.moveLeftAndFade)
             }
             
             Spacer()
