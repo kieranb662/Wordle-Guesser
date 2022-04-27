@@ -10,7 +10,6 @@ import Primitives
 
 struct ContentView: View {
     @StateObject var game = Game()
-    @State var isPresentingPossibleSolutions = false
     
     var body: some View {
         VStack {
@@ -34,7 +33,16 @@ struct ContentView: View {
             
             Spacer()
             
-            Inputs()
+            if game.guessCurrentlyEditing.count == 5 {
+                SubmitGuessButton()
+                Spacer()
+            } else {
+                if game.letterSelected == nil {
+                    Keyboard()
+                } else {
+                    ResultButtons()
+                }
+            }
         }
         .padding()
         .environmentObject(game)
