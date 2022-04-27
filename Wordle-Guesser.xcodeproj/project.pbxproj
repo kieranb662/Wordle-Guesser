@@ -24,7 +24,7 @@
 		8958AD162818ACA200F9FE03 /* 5-letter-words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD152818ACA200F9FE03 /* 5-letter-words.txt */; };
 		8958AD182818B6B800F9FE03 /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD172818B6B800F9FE03 /* Controls.swift */; };
 		8958AD1A2818B77500F9FE03 /* GuessViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD192818B77500F9FE03 /* GuessViews.swift */; };
-		89B1D94A2819920E00EAA8D3 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1D9492819920E00EAA8D3 /* KeyboardButton.swift */; };
+		89B1D94A2819920E00EAA8D3 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1D9492819920E00EAA8D3 /* Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		8958AD152818ACA200F9FE03 /* 5-letter-words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "5-letter-words.txt"; sourceTree = "<group>"; };
 		8958AD172818B6B800F9FE03 /* Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
 		8958AD192818B77500F9FE03 /* GuessViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessViews.swift; sourceTree = "<group>"; };
-		89B1D9492819920E00EAA8D3 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
+		89B1D9492819920E00EAA8D3 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 				8958AD172818B6B800F9FE03 /* Controls.swift */,
 				8903E34D2819CBB300279EE7 /* SubmitGuessButton.swift */,
 				8903E3432819C08500279EE7 /* Style.swift */,
-				89B1D9492819920E00EAA8D3 /* KeyboardButton.swift */,
+				89B1D9492819920E00EAA8D3 /* Keyboard.swift */,
 				8958AD132818AC8400F9FE03 /* Logic.swift */,
 				8903E33B28199D8200279EE7 /* BestNextGuess.swift */,
 				8958AD152818ACA200F9FE03 /* 5-letter-words.txt */,
@@ -188,7 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8903E34A2819CAB100279EE7 /* ShowSolutionsButton.swift in Sources */,
-				89B1D94A2819920E00EAA8D3 /* KeyboardButton.swift in Sources */,
+				89B1D94A2819920E00EAA8D3 /* Keyboard.swift in Sources */,
 				8958AD082818AC7700F9FE03 /* ContentView.swift in Sources */,
 				8903E34E2819CBB300279EE7 /* SubmitGuessButton.swift in Sources */,
 				8958AD182818B6B800F9FE03 /* Controls.swift in Sources */,
