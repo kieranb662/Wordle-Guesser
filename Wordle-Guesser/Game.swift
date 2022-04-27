@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Primitives
 
 class Game: ObservableObject {
     @Published var guesses = [Guess]()
@@ -55,6 +56,13 @@ class Game: ObservableObject {
         }
     }
     
+    func reset() {
+        guessCurrentlyEditing = []
+        guesses = []
+        letterSelected = nil
+        RigidImpactHaptic()
+    }
+    
     func regex() -> String {
         var regex = ""
         let baseWrongCharacters = incorrectLetters.joined()
@@ -100,14 +108,20 @@ class Game: ObservableObject {
             }
         }
         
-        let numberOfKnownLetters = Set(correctSpots.map(\.character) +
-        lettersContained.map(\.character))
-        .count
+        let numberOfKnownLetters = Set(
+            correctSpots.map(\.character) + lettersContained.map(\.character)
+        ).count
+        
+        let numberOfUnknownLetters = 5 - numberOfKnownLetters
+        
+        guard !possibleWords().isEmpty && numberOfUnknownLetters > 0 else {
+            return nil
+        }
         
         return bestNextGuess(
             possibilities: possibleWords(),
             unguessedLetters: unguessedLetters,
-            numberOfUnknownLetters: 5 - numberOfKnownLetters)
+            numberOfUnknownLetters: numberOfUnknownLetters)
     }
     
     // For each letter know the number of possible words that contain that letter

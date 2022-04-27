@@ -12,9 +12,18 @@ struct ShowSolutionsButton: View {
     @State var isPresentingPossibleSolutions = false
     
     var body: some View {
-        Button("Show \(game.possibleWords().count) Possible Solutions") {
-            isPresentingPossibleSolutions = true
-            SelectionHaptic()
+        let numberOfWords = game.possibleWords().count
+        let text = numberOfWords > 0
+        ? "Show \(numberOfWords) Possible Solutions"
+        : "No possible words (retry)"
+        
+        Button(text) {
+            if numberOfWords > 0 {
+                isPresentingPossibleSolutions = true
+                SelectionHaptic()
+            } else {
+                game.reset()
+            }
         }
         .font(.textButton)
         .transition(.moveLeftAndFade)
