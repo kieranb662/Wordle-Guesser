@@ -23,8 +23,8 @@ struct RootView: View {
             GuessView()
                 .padding(.horizontal)
             
-            if let nextBestGuess = game.nextBestGuess() {
-                NextBestGuessDisplay(word: nextBestGuess)
+            if let nextBestGuess = game.recommendedGuess() {
+                RecommendedGuessDisplay(word: nextBestGuess)
             }
             
             if game.guesses.count > 0 {

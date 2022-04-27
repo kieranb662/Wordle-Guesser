@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct NextBestGuessDisplay: View {
+struct RecommendedGuessDisplay: View {
     var word: String
     var body: some View {
         HStack {
-            Text("Best Next Guess:")
+            Text("Recommended Next Guess:")
                 .font(.label)
             
             Spacer()
@@ -31,7 +31,7 @@ struct NextBestGuessDisplay: View {
 
 struct NextBestGuessDisplay_Previews: PreviewProvider {
     static var previews: some View {
-        NextBestGuessDisplay(word: "deist")
+        RecommendedGuessDisplay(word: "deist")
             .prepareForPreview()
     }
 }

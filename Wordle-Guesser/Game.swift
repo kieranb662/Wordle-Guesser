@@ -82,7 +82,7 @@ extension Game {
 
 extension Game {
     
-    func nextBestGuess() -> String? {
+    func recommendedGuess() -> String? {
         guard !guesses.isEmpty else {
             return nil
         }
@@ -106,14 +106,14 @@ extension Game {
             return nil
         }
         
-        return bestNextGuess(
+        return recommendNextGuess(
             possibilities: possibleWords(),
             unguessedLetters: unguessedLetters,
             numberOfUnknownLetters: numberOfUnknownLetters)
     }
     
     // For each letter know the number of possible words that contain that letter
-    func bestNextGuess(possibilities: [String], unguessedLetters: String, numberOfUnknownLetters: Int) -> String {
+    func recommendNextGuess(possibilities: [String], unguessedLetters: String, numberOfUnknownLetters: Int) -> String {
         var wordsContainingLetter = [String: [String]]()
         
         for letter in unguessedLetters {
