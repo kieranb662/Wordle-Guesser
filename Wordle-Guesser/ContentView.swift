@@ -29,26 +29,13 @@ struct ContentView: View {
             }
             
             if game.guesses.count > 0 {
-                Button("Show \(game.possibleWords().count) Possible Solutions") {
-                    isPresentingPossibleSolutions = true
-                    SelectionHaptic()
-                }
-                .font(.textButton)
-                .transition(.moveLeftAndFade)
+                ShowSolutionsButton()
             }
             
             Spacer()
             
             Inputs()
-            
         }
-        .sheet(isPresented: $isPresentingPossibleSolutions, content: {
-            List {
-                ForEach(game.possibleWords().sorted(), id: \.self) { word in
-                    Text(word)
-                }
-            }
-        })
         .padding()
         .environmentObject(game)
     }
