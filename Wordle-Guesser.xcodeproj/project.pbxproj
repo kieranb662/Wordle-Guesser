@@ -12,6 +12,7 @@
 		8903E3412819B91A00279EE7 /* UITools in Frameworks */ = {isa = PBXBuildFile; productRef = 8903E3402819B91A00279EE7 /* UITools */; };
 		8903E3442819C08500279EE7 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3432819C08500279EE7 /* Style.swift */; };
 		8903E3462819C9C400279EE7 /* ResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3452819C9C400279EE7 /* ResetButton.swift */; };
+		8903E3482819CA1F00279EE7 /* NextBestGuessDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3472819CA1F00279EE7 /* NextBestGuessDisplay.swift */; };
 		8958AD062818AC7700F9FE03 /* Wordle_GuesserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */; };
 		8958AD082818AC7700F9FE03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD072818AC7700F9FE03 /* ContentView.swift */; };
 		8958AD0A2818AC7800F9FE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD092818AC7800F9FE03 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		8903E3422819BAD800279EE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8903E3432819C08500279EE7 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		8903E3452819C9C400279EE7 /* ResetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButton.swift; sourceTree = "<group>"; };
+		8903E3472819CA1F00279EE7 /* NextBestGuessDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBestGuessDisplay.swift; sourceTree = "<group>"; };
 		8958AD022818AC7700F9FE03 /* Wordle-Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wordle-Guesser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordle_GuesserApp.swift; sourceTree = "<group>"; };
 		8958AD072818AC7700F9FE03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */,
 				8958AD072818AC7700F9FE03 /* ContentView.swift */,
 				8903E3452819C9C400279EE7 /* ResetButton.swift */,
+				8903E3472819CA1F00279EE7 /* NextBestGuessDisplay.swift */,
 				8958AD192818B77500F9FE03 /* GuessViews.swift */,
 				8958AD172818B6B800F9FE03 /* Controls.swift */,
 				8903E3432819C08500279EE7 /* Style.swift */,
@@ -180,6 +183,7 @@
 				8958AD182818B6B800F9FE03 /* Controls.swift in Sources */,
 				8958AD142818AC8400F9FE03 /* Logic.swift in Sources */,
 				8958AD062818AC7700F9FE03 /* Wordle_GuesserApp.swift in Sources */,
+				8903E3482819CA1F00279EE7 /* NextBestGuessDisplay.swift in Sources */,
 				8958AD1A2818B77500F9FE03 /* GuessViews.swift in Sources */,
 				8903E33C28199D8200279EE7 /* BestNextGuess.swift in Sources */,
 				8903E3462819C9C400279EE7 /* ResetButton.swift in Sources */,

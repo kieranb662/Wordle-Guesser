@@ -25,20 +25,7 @@ struct ContentView: View {
                 .padding(.horizontal)
             
             if let nextBestGuess = game.nextBestGuess() {
-                HStack {
-                    Text("Best Next Guess:")
-                        .font(.label)
-                    
-                    Spacer()
-                    
-                    Text(nextBestGuess)
-                        .foregroundColor(.bestGuessForeground)
-                        .font(.bestGuess)
-                        .padding(4)
-                        .background(Color.bestGuessBackground, in: .bestGuessShape)
-                }
-                .padding()
-                .transition(.moveLeftAndFade)
+                NextBestGuessDisplay(word: nextBestGuess)
             }
             
             if game.guesses.count > 0 {

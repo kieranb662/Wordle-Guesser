@@ -27,5 +27,6 @@ struct ResetButton: View {
 struct ResetButton_Previews: PreviewProvider {
     static var previews: some View {
         ResetButton()
+            .environmentObject(Game())
     }
 }
