@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Primitives
 
 struct KeyboardButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
@@ -30,6 +31,8 @@ struct KeyboardButton: View {
             withAnimation(.spring().speed(1.5)) {
                 game.select(letter: character)
             }
+            
+            LightImpactHaptic()
         })
         .buttonStyle(KeyboardButtonStyle())
     }

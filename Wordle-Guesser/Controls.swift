@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Primitives
 
 struct KeyboardRow: View {
     var characters: String
@@ -33,7 +33,10 @@ struct Keyboard: View {
             HStack(spacing: 5) {
                 KeyboardRow(characters: bottomRow)
                 
-                Button(action: { _ = game.guessCurrentlyEditing.removeLast() }) {
+                Button(action: {
+                    _ = game.guessCurrentlyEditing.removeLast()
+                    LightImpactHaptic()
+                }) {
                     Image(systemName: "delete.left")
                 }
                 .disabled(game.guessCurrentlyEditing.isEmpty)
@@ -54,6 +57,8 @@ struct ResultButton: View {
             withAnimation(.spring().speed(1.5)) {
                 game.addResult(result: result)
             }
+            
+            SelectionHaptic()
         }) {
             Text(result.rawValue)
                 .frame(maxWidth: .infinity)
@@ -73,7 +78,12 @@ struct ResultButtons: View {
             ResultButton(result: .rightPosition)
             ResultButton(result: .wrongPosition)
             ResultButton(result: .notInWord)
-            Button("Reselect Letter", action: { game.letterSelected = nil })
+            Button("Reselect Letter", action: {
+                withAnimation(.spring().speed(1.5)) {
+                    game.letterSelected = nil
+                }
+                ErrorHaptic()
+            })
         }
     }
     
@@ -88,6 +98,7 @@ struct Inputs: View {
                 withAnimation(.spring().speed(1.5)) {
                     game.submitGuess()
                 }
+                SuccessHaptic()
             }) {
                 Text("Submit Guess")
                     .frame(maxWidth: .infinity)
