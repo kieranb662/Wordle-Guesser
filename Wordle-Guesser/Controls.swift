@@ -46,6 +46,7 @@ struct Keyboard: View {
                 .buttonStyle(KeyboardButtonStyle())
             }
         }
+        .transition(.moveDownAndFade)
     }
     
     @EnvironmentObject private var game: Game
@@ -54,34 +55,14 @@ struct Keyboard: View {
 struct Inputs: View {
     var body: some View {
         if game.guessCurrentlyEditing.count == 5 {
-  
-            Button(action: {
-                withAnimation(.hideAndShow) {
-                    game.submitGuess()
-                }
-                SuccessHaptic()
-            }) {
-                Text("Submit Guess")
-                    .font(.resultButton)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: submitButtonHeight)
-            }
-            .tint(.selectedBoxBackground)
-            .buttonStyle(.borderedProminent)
-            
+            SubmitGuessButton()
         } else {
             if game.letterSelected == nil {
                 Keyboard()
-                    .transition(.moveDownAndFade)
-                    .zIndex(game.letterSelected == nil ? 1 : 0)
             } else {
-
                 ResultButtons()
-                    .transition(.moveDownAndFade)
-                    .zIndex(game.letterSelected != nil ? 1 : 0)
             }
         }
-        
     }
     
     @EnvironmentObject private var game: Game

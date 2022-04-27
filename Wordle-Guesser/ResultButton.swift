@@ -49,6 +49,7 @@ struct ResultButtons: View {
             })
             .font(.resultButton)
         }
+        .transition(.moveDownAndFade)
     }
     
     @EnvironmentObject private var game: Game
