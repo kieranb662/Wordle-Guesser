@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8903E33C28199D8200279EE7 /* BestNextGuess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E33B28199D8200279EE7 /* BestNextGuess.swift */; };
 		8903E33F2819B91A00279EE7 /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = 8903E33E2819B91A00279EE7 /* Extensions */; };
 		8903E3412819B91A00279EE7 /* UITools in Frameworks */ = {isa = PBXBuildFile; productRef = 8903E3402819B91A00279EE7 /* UITools */; };
 		8903E3442819C08500279EE7 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3432819C08500279EE7 /* Style.swift */; };
@@ -31,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8903E33B28199D8200279EE7 /* BestNextGuess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestNextGuess.swift; sourceTree = "<group>"; };
 		8903E3422819BAD800279EE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8903E3432819C08500279EE7 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		8903E3452819C9C400279EE7 /* ResetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButton.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				8958AD132818AC8400F9FE03 /* Logic.swift */,
 				8903E3532819D17100279EE7 /* Guess.swift */,
 				8903E3512819D13100279EE7 /* RegexUtilities.swift */,
-				8903E33B28199D8200279EE7 /* BestNextGuess.swift */,
 				8958AD152818ACA200F9FE03 /* 5-letter-words.txt */,
 				8958AD092818AC7800F9FE03 /* Assets.xcassets */,
 				8958AD0B2818AC7800F9FE03 /* Preview Content */,
@@ -208,7 +205,6 @@
 				8958AD062818AC7700F9FE03 /* Wordle_GuesserApp.swift in Sources */,
 				8903E3482819CA1F00279EE7 /* NextBestGuessDisplay.swift in Sources */,
 				8958AD1A2818B77500F9FE03 /* GuessViews.swift in Sources */,
-				8903E33C28199D8200279EE7 /* BestNextGuess.swift in Sources */,
 				8903E3542819D17100279EE7 /* Guess.swift in Sources */,
 				8903E3462819C9C400279EE7 /* ResetButton.swift in Sources */,
 				8903E3442819C08500279EE7 /* Style.swift in Sources */,
