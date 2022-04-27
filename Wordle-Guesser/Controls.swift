@@ -71,7 +71,9 @@ struct ResultButton: View {
                 game.addResult(result: result)
             }
         }) {
-            Text(result.rawValue).frame(maxWidth: .infinity)
+            Text(result.rawValue)
+                .frame(maxWidth: .infinity)
+                .frame(height: 36)
         }
         .textCase(.uppercase)
         .tint(result.color)
@@ -83,7 +85,7 @@ struct ResultButton: View {
 
 struct ResultButtons: View {
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             ResultButton(result: .rightPosition)
             ResultButton(result: .wrongPosition)
             ResultButton(result: .notInWord)

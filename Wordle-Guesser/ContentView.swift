@@ -13,6 +13,19 @@ struct ContentView: View {
   
     var body: some View {
         VStack {
+            HStack {
+                Spacer()
+                
+                Button("Reset", action: {
+                    game.guessCurrentlyEditing = []
+                    game.guesses = []
+                    game.letterSelected = nil
+                   
+                })
+                .tint(.red)
+                .disabled(game.guesses.count == 0)
+            }.padding()
+            
            GuessView()
             
             if game.guesses.count > 0 {
@@ -40,6 +53,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().preferredColorScheme(.dark)
     }
 }
