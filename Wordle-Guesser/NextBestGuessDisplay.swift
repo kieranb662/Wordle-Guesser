@@ -32,6 +32,6 @@ struct NextBestGuessDisplay: View {
 struct NextBestGuessDisplay_Previews: PreviewProvider {
     static var previews: some View {
         NextBestGuessDisplay(word: "deist")
-            .environmentObject(Game())
+            .prepareForPreview()
     }
 }

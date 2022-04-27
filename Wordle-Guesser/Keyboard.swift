@@ -23,7 +23,6 @@ struct KeyboardButtonStyle: ButtonStyle {
 }
 
 struct KeyboardButton: View {
-    
     var character: String
     
     var body: some View {
@@ -53,18 +52,15 @@ struct KeyboardRow: View {
 }
 
 struct Keyboard: View {
-    let topRow = "qwertyuiop"
-    let middleRow = "asdfghjkl"
-    let bottomRow = "zxcvbnm"
-    
+
     var body: some View {
         VStack(spacing: keyboardButtonSpacing) {
             
-            KeyboardRow(characters: topRow)
-            KeyboardRow(characters: middleRow)
+            KeyboardRow(characters: "qwertyuiop")
+            KeyboardRow(characters: "asdfghjkl")
             
             HStack(spacing: keyboardButtonSpacing) {
-                KeyboardRow(characters: bottomRow)
+                KeyboardRow(characters: "zxcvbnm")
                 
                 Button(action: {
                     withAnimation(.hideAndShow) {
@@ -89,7 +85,10 @@ struct Keyboard: View {
 struct KeyboardButton_Previews: PreviewProvider {
     static var previews: some View {
        KeyboardButton(character: "a")
-            .environmentObject(Game())
+            .prepareForPreview()
+        
+        Keyboard()
+            .prepareForPreview()
     
     }
 }

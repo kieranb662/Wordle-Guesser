@@ -33,7 +33,6 @@ struct ResultButton: View {
     @EnvironmentObject private var game: Game
 }
 
-
 struct ResultButtons: View {
     var body: some View {
         VStack(spacing: resultButtonSpacing) {
@@ -57,7 +56,7 @@ struct ResultButtons: View {
 
 struct ResultButton_Previews: PreviewProvider {
     static var previews: some View {
-        ResultButton(result: .notInWord)
-            .environmentObject(Game())
+        ResultButtons()
+            .prepareForPreview()
     }
 }

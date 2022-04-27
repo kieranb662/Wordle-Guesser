@@ -31,5 +31,6 @@ struct SubmitGuessButton: View {
 struct SubmitGuessButton_Previews: PreviewProvider {
     static var previews: some View {
         SubmitGuessButton()
+            .prepareForPreview()
     }
 }

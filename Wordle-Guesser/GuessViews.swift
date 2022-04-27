@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CharacterBox: View {
+struct LetterBox: View {
     var value: (character: String, result: GuessResult)
     
     var body: some View {
@@ -22,19 +22,12 @@ struct CurrentGuessRow: View {
         HStack {
             ForEach(0..<5) { letterIndex in
                 if letterIndex < game.guessCurrentlyEditing.count {
-                    CharacterBox(value: game.guessCurrentlyEditing[letterIndex])
+                    LetterBox(value: game.guessCurrentlyEditing[letterIndex])
                     
                 } else if letterIndex == game.guessCurrentlyEditing.count {
-                    
-                    if let selectedLetter = game.letterSelected {
-                        Text(selectedLetter)
-                            .letterBoxStyle(color: .selectedBoxBackground)
-                        
-                    } else {
-                        Color.selectedBoxBackground
-                            .squareAspectRatio()
-                    }
-                  
+                    Text(game.letterSelected ?? " ")
+                        .letterBoxStyle(color: .selectedBoxBackground)
+
                 } else {
                     Color.unfilledGuessBackground
                         .squareAspectRatio()
@@ -69,7 +62,7 @@ struct AlreadyGuessedRow: View {
             ForEach(0..<5) { letterIndex in
                 if index < game.guesses.count &&
                     letterIndex < game.guesses[index].count {
-                    CharacterBox(value: game.guesses[index][letterIndex])
+                    LetterBox(value: game.guesses[index][letterIndex])
                 }
             }
         }
@@ -78,32 +71,30 @@ struct AlreadyGuessedRow: View {
     @EnvironmentObject private var game: Game
 }
 
-struct GuessRow: View {
-    var index: Int
-    
+struct EmptyGuessRow: View {
     var body: some View {
-        if index < game.guesses.count {
-            AlreadyGuessedRow(index: index)
-        } else if index == game.guesses.count {
-            CurrentGuessRow()
-        } else {
-            HStack {
-                ForEach(0..<5) { _ in
-                    Rectangle()
-                        .stroke(Color.emptyGuessRowStroke)
-                        .squareAspectRatio()
-                }
+        HStack {
+            ForEach(0..<5) { _ in
+                Rectangle()
+                    .stroke(Color.emptyGuessRowStroke)
+                    .squareAspectRatio()
             }
         }
     }
-    
-    @EnvironmentObject private var game: Game
 }
 
 struct GuessView: View {
     var body: some View {
         VStack {
-            ForEach(0..<6, content: GuessRow.init)
+            ForEach(0..<6) { index in
+                if index < game.guesses.count {
+                    AlreadyGuessedRow(index: index)
+                } else if index == game.guesses.count {
+                    CurrentGuessRow()
+                } else {
+                    EmptyGuessRow()
+                }
+            }
         }
     }
     
@@ -112,9 +103,19 @@ struct GuessView: View {
 
 struct GuessViews_Previews: PreviewProvider {
     static var previews: some View {
+        EmptyGuessRow()
+            .prepareForPreview()
+        
+        CurrentGuessRow()
+            .prepareForPreview()
+        
+        CurrentGuessRow()
+            .prepareForPreview(.noGuessesOneLetterSelected)
+        
+        AlreadyGuessedRow(index: 0)
+            .prepareForPreview(.oneGuess)
+        
         GuessView()
-            .environmentObject(Game())
-            .padding()
-            .previewLayout(.sizeThatFits)
+            .prepareForPreview(.oneGuess)
     }
 }

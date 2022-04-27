@@ -34,6 +34,6 @@ struct ShowSolutionsButton: View {
 struct ShowSolutionsButton_Previews: PreviewProvider {
     static var previews: some View {
         ShowSolutionsButton()
-            .environmentObject(Game())
+            .prepareForPreview(.oneGuess)
     }
 }

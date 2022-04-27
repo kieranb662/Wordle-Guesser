@@ -55,7 +55,6 @@ extension AnyTransition {
     static let moveDownAndFade = AnyTransition.move(edge: .bottom).combined(with: .opacity)
 }
 
-
 extension Font {
     static let letterBox = Font.title
     static let bestGuess = Font.headline
@@ -63,10 +62,4 @@ extension Font {
     static let resultButton = Font.body
     static let label = Font.title2
     static let textButton = Font.body
-}
-
-struct Style_Previews: PreviewProvider {
-    static var previews: some View {
-        Color.red
-    }
 }

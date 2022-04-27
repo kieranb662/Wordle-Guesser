@@ -12,6 +12,7 @@ struct Inputs: View {
     var body: some View {
         if game.guessCurrentlyEditing.count == 5 {
             SubmitGuessButton()
+            Spacer()
         } else {
             if game.letterSelected == nil {
                 Keyboard()
