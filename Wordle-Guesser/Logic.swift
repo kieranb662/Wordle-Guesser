@@ -133,7 +133,6 @@ class Game: ObservableObject {
         var regex = ""
         let baseWrongCharacters = incorrectLetters.joined()
         
-        
         for i in 0...4 {
             if let correctLetter = correctSpots.first(where: { $0.position == i }) {
                 regex += correctLetter.character
@@ -144,7 +143,6 @@ class Game: ObservableObject {
                     .joined()
                 
                 regex += "[^\(baseWrongCharacters)\(excludedFromSpotLetters)\n]"
-                
             }
         }
         

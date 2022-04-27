@@ -7,31 +7,11 @@
 
 import SwiftUI
 
-struct KeyboardButton: View {
-    
-    var character: String
-    
-    var body: some View {
-        Button(character, action: {
-            withAnimation(.spring().speed(1.5)) {
-                game.select(letter: character)
-            }
-        })
-            .font(.headline)
-            .foregroundColor(.white)
-            .frame(width: 24, height: 36)
-            .padding(4)
-            .background(Color(white: 0.2), in: RoundedRectangle(cornerRadius: 3))
-        
-    }
-    
-    @EnvironmentObject private var game: Game
-}
 
 struct KeyboardRow: View {
     var characters: String
     var body: some View {
-        HStack(spacing: 4) {
+        HStack(spacing: 5) {
             ForEach(characters.filter({_ in true}), id: \.self) { char in
                 KeyboardButton(character: String(char))
             }
@@ -45,17 +25,21 @@ struct Keyboard: View {
     let bottomRow = "zxcvbnm"
     
     var body: some View {
-        VStack {
+        VStack(spacing: 5) {
+            
             KeyboardRow(characters: topRow)
             KeyboardRow(characters: middleRow)
-            KeyboardRow(characters: bottomRow)
-        }
-        .overlay(alignment: .bottomTrailing) {
-            Button(action: { _ = game.guessCurrentlyEditing.removeLast() }) {
-                Image(systemName: "delete.left")
+            
+            HStack(spacing: 5) {
+                KeyboardRow(characters: bottomRow)
+                
+                Button(action: { _ = game.guessCurrentlyEditing.removeLast() }) {
+                    Image(systemName: "delete.left")
+                }
+                .disabled(game.guessCurrentlyEditing.isEmpty)
+                .padding([.trailing])
+                .buttonStyle(KeyboardButtonStyle())
             }
-            .disabled(game.guessCurrentlyEditing.isEmpty)
-            .padding([.bottom, .trailing])
         }
     }
     
