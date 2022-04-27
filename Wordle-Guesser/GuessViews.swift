@@ -12,10 +12,7 @@ struct CharacterBox: View {
     
     var body: some View {
         Text(value.character)
-            .font(.title)
-            .foregroundColor(.white)
-            .frame(width: 50, height: 50)
-            .background(value.result.color)
+            .letterBoxStyle(color: value.result.color)
     }
 }
 
@@ -30,26 +27,35 @@ struct CurrentGuessRow: View {
                 } else if letterIndex == game.guessCurrentlyEditing.count {
                     
                     if let selectedLetter = game.letterSelected {
-                        Text(selectedLetter)
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .frame(width: 50, height: 50)
-                            .background(Color.blue)
+                        Text(selectedLetter).letterBoxStyle(color: .blue)
                         
                     } else {
-                        Color.blue
-                            .frame(width: 50, height: 50)
+                        Color.blue.squareAspectRatio()
                     }
                   
                 } else {
-                    Color(white: 0.6)
-                        .frame(width: 50, height: 50)
+                    Color(white: 0.6).squareAspectRatio()
                 }
             }
         }
     }
     
     @EnvironmentObject private var game: Game
+}
+
+extension View {
+    func squareAspectRatio() -> some View {
+        return frame(maxWidth: 200, maxHeight: .infinity)
+            .aspectRatio(1, contentMode: .fit)
+            
+    }
+    
+    func letterBoxStyle(color: Color) -> some View {
+        return font(.title)
+            .foregroundColor(.white)
+            .squareAspectRatio()
+            .background(color)
+    }
 }
 
 struct AlreadyGuessedRow: View {
@@ -82,7 +88,7 @@ struct GuessRow: View {
                 ForEach(0..<5) { _ in
                     Rectangle()
                         .stroke(Color.gray)
-                        .frame(width: 50, height: 50)
+                        .squareAspectRatio()
                 }
             }
         }
@@ -94,7 +100,7 @@ struct GuessRow: View {
 struct GuessView: View {
     var body: some View {
         VStack {
-            ForEach(0..<5, content: GuessRow.init)
+            ForEach(0..<6, content: GuessRow.init)
         }
     }
     

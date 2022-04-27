@@ -13,6 +13,7 @@ struct ContentView: View {
   
     var body: some View {
         VStack {
+            
             HStack {
                 Spacer()
                 
@@ -24,9 +25,11 @@ struct ContentView: View {
                 })
                 .tint(.red)
                 .disabled(game.guesses.count == 0)
-            }.padding()
+            }
+            .padding()
             
            GuessView()
+                .padding(.horizontal)
             
             if game.guesses.count > 0 {
                 Button("Show \(game.possibleWords().count) Possible Solutions",
