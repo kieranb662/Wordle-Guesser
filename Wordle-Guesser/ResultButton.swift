@@ -14,7 +14,7 @@ struct ResultButton: View {
     var body: some View {
         Button(action: {
             withAnimation(.hideAndShow) {
-                game.addResult(result: result)
+                game.select(result: result)
             }
             
             SelectionHaptic()

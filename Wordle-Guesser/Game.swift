@@ -9,28 +9,14 @@ import Foundation
 import SwiftUI
 import Primitives
 
+// MARK: - Declaration
+
 class Game: ObservableObject {
     @Published var guesses = [Guess]()
     @Published var guessCurrentlyEditing: Guess = []
     @Published var letterSelected: String?
     
-    func select(letter: String) {
-        self.letterSelected = letter
-    }
-    
-    func addResult(result: GuessResult) {
-        if let letterSelected = letterSelected {
-            guessCurrentlyEditing.append((letterSelected, result))
-            self.letterSelected = nil
-        }
-    }
-    
-    func submitGuess() {
-        guesses += [guessCurrentlyEditing]
-        guessCurrentlyEditing = []
-    }
-    
-    var lettersContained: [(position: Int, character: String)] {
+    var lettersInWrongPosition: [(position: Int, character: String)] {
         return guesses.flatMap { guess in
             return guess
                 .enumerated()
@@ -39,7 +25,7 @@ class Game: ObservableObject {
         }
     }
     
-    var correctSpots: [(position: Int, character: String)] {
+    var lettersInCorrectPosition: [(position: Int, character: String)] {
         guesses.flatMap { guess in
             guess
                 .enumerated()
@@ -48,30 +34,28 @@ class Game: ObservableObject {
         }
     }
     
-    var incorrectLetters: [String] {
+    var lettersNotInWord: [String] {
         guesses.flatMap { guess in
             guess
                 .filter({ $0.result == .notInWord })
                 .map(\.character)
         }
     }
+}
+
+// MARK: - Find Possible Words
+
+extension Game {
     
-    func reset() {
-        guessCurrentlyEditing = []
-        guesses = []
-        letterSelected = nil
-        RigidImpactHaptic()
-    }
-    
-    func regex() -> String {
+    func generateRegexPattern() -> String {
         var regex = ""
-        let baseWrongCharacters = incorrectLetters.joined()
+        let baseWrongCharacters = lettersNotInWord.joined()
         
         for i in 0...4 {
-            if let correctLetter = correctSpots.first(where: { $0.position == i }) {
+            if let correctLetter = lettersInCorrectPosition.first(where: { $0.position == i }) {
                 regex += correctLetter.character
             } else {
-                let excludedFromSpotLetters = lettersContained
+                let excludedFromSpotLetters = lettersInWrongPosition
                     .filter { $0.position == i }
                     .map(\.character)
                     .joined()
@@ -84,15 +68,19 @@ class Game: ObservableObject {
     }
     
     func possibleWords() -> [String] {
-        let regex = try! NSRegularExpression(pattern: regex())
+        let regex = try! NSRegularExpression(pattern: generateRegexPattern())
         let wordList = load(file: "5-letter-words")!
         let results = regex.capture(in: wordList)
-        let contained = lettersContained.map(\.character)
+        let contained = lettersInWrongPosition.map(\.character)
         return results
             .filter({ contained.allSatisfy($0.value.contains) })
             .map(\.value)
     }
-    
+}
+
+// MARK: - Guess Recomendation
+
+extension Game {
     
     func nextBestGuess() -> String? {
         guard !guesses.isEmpty else {
@@ -109,7 +97,7 @@ class Game: ObservableObject {
         }
         
         let numberOfKnownLetters = Set(
-            correctSpots.map(\.character) + lettersContained.map(\.character)
+            lettersInCorrectPosition.map(\.character) + lettersInWrongPosition.map(\.character)
         ).count
         
         let numberOfUnknownLetters = 5 - numberOfKnownLetters
@@ -163,6 +151,32 @@ class Game: ObservableObject {
         
         return bestChoice
     }
-
 }
 
+// MARK: - Viewmodel
+
+extension Game {
+    
+    func select(letter: String) {
+        self.letterSelected = letter
+    }
+    
+    func select(result: GuessResult) {
+        if let letterSelected = letterSelected {
+            guessCurrentlyEditing.append((letterSelected, result))
+            self.letterSelected = nil
+        }
+    }
+    
+    func submitGuess() {
+        guesses += [guessCurrentlyEditing]
+        guessCurrentlyEditing = []
+    }
+    
+    func reset() {
+        guessCurrentlyEditing = []
+        guesses = []
+        letterSelected = nil
+        RigidImpactHaptic()
+    }
+}
