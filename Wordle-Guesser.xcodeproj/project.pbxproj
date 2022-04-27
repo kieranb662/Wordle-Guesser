@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8903E33C28199D8200279EE7 /* BestNextGuess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E33B28199D8200279EE7 /* BestNextGuess.swift */; };
 		8958AD062818AC7700F9FE03 /* Wordle_GuesserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */; };
 		8958AD082818AC7700F9FE03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD072818AC7700F9FE03 /* ContentView.swift */; };
 		8958AD0A2818AC7800F9FE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD092818AC7800F9FE03 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8903E33B28199D8200279EE7 /* BestNextGuess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestNextGuess.swift; sourceTree = "<group>"; };
 		8958AD022818AC7700F9FE03 /* Wordle-Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wordle-Guesser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordle_GuesserApp.swift; sourceTree = "<group>"; };
 		8958AD072818AC7700F9FE03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				8958AD172818B6B800F9FE03 /* Controls.swift */,
 				89B1D9492819920E00EAA8D3 /* KeyboardButton.swift */,
 				8958AD132818AC8400F9FE03 /* Logic.swift */,
+				8903E33B28199D8200279EE7 /* BestNextGuess.swift */,
 				8958AD152818ACA200F9FE03 /* 5-letter-words.txt */,
 				8958AD092818AC7800F9FE03 /* Assets.xcassets */,
 				8958AD0B2818AC7800F9FE03 /* Preview Content */,
@@ -159,6 +162,7 @@
 				8958AD142818AC8400F9FE03 /* Logic.swift in Sources */,
 				8958AD062818AC7700F9FE03 /* Wordle_GuesserApp.swift in Sources */,
 				8958AD1A2818B77500F9FE03 /* GuessViews.swift in Sources */,
+				8903E33C28199D8200279EE7 /* BestNextGuess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

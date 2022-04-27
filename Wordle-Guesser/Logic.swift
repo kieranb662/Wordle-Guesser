@@ -158,4 +158,29 @@ class Game: ObservableObject {
             .filter({ contained.allSatisfy($0.value.contains) })
             .map(\.value)
     }
+    
+    
+    func nextBestGuess() -> String? {
+        guard !guesses.isEmpty else {
+            return nil
+        }
+        
+        let unguessedLetters = "qwertyuiopasdfghjklzxcvbnm".filter { letter in
+            
+            return !guesses.flatMap { guess in
+                guess
+            }.contains { guessedLetter, _ in
+                guessedLetter == String(letter)
+            }
+        }
+        
+        let numberOfKnownLetters = Set(correctSpots.map(\.character) +
+        lettersContained.map(\.character))
+        .count
+        
+        return bestNextGuess(
+            possibilities: possibleWords(),
+            unguessedLetters: unguessedLetters,
+            numberOfUnknownLetters: 5 - numberOfKnownLetters)
+    }
 }

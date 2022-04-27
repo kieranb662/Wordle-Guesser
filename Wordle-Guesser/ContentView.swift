@@ -31,6 +31,11 @@ struct ContentView: View {
            GuessView()
                 .padding(.horizontal)
             
+            if let nextBestGuess = game.nextBestGuess() {
+                Text("Best Next Guess: " + nextBestGuess).font(.title)
+                    .padding()
+            }
+            
             if game.guesses.count > 0 {
                 Button("Show \(game.possibleWords().count) Possible Solutions",
                        action: { isPresentingPossibleSolutions = true })
