@@ -9,12 +9,21 @@ import Foundation
 import SwiftUI
 import Primitives
 
+extension Guess {
+    var hasRepeatedLetters: Bool {
+        
+        return false
+    }
+    
+}
+
 // MARK: - Declaration
 
 class Game: ObservableObject {
     @Published var guesses = [Guess]()
     @Published var guessCurrentlyEditing: Guess = []
     @Published var letterSelected: String?
+    @Published var recommendedNextGuess: String?
     
     var lettersInWrongPosition: [(position: Int, character: String)] {
         return guesses.flatMap { guess in
@@ -41,6 +50,7 @@ class Game: ObservableObject {
                 .map(\.character)
         }
     }
+
 }
 
 // MARK: - Find Possible Words
@@ -71,9 +81,9 @@ extension Game {
         let regex = try! NSRegularExpression(pattern: generateRegexPattern())
         let wordList = load(file: "5-letter-words")!
         let results = regex.capture(in: wordList)
-        let contained = lettersInWrongPosition.map(\.character)
+        let lettersInWrongPosition = lettersInWrongPosition.map(\.character)
         return results
-            .filter({ contained.allSatisfy($0.value.contains) })
+//            .filter({ lettersInWrongPosition.allSatisfy($0.value.contains) })
             .map(\.value)
     }
 }
@@ -113,7 +123,7 @@ extension Game {
     }
     
     // For each letter know the number of possible words that contain that letter
-    func recommendNextGuess(possibilities: [String], unguessedLetters: String, numberOfUnknownLetters: Int) -> String {
+    func recommendNextGuess(possibilities: [String], unguessedLetters: String, numberOfUnknownLetters: Int) -> String? {
         var wordsContainingLetter = [String: [String]]()
         
         for letter in unguessedLetters {
@@ -123,7 +133,6 @@ extension Game {
                 } else {
                     wordsContainingLetter[String(letter)]? += [word]
                 }
-             
             }
         }
         
@@ -131,9 +140,15 @@ extension Game {
             .map { (letter: $0, words: $1) }
             .sorted { previous, next in previous.words.count > next.words.count}
         
-        let mostCommonLetters = Array(sortedByMostCommonLetters[0..<numberOfUnknownLetters])
+        var mostCommonLetters = [(letter: String, words: [String])]()
         
-        var bestChoice = ""
+        if sortedByMostCommonLetters.count == 1 {
+            mostCommonLetters = [sortedByMostCommonLetters[0]]
+        } else if sortedByMostCommonLetters.count > 1 {
+            mostCommonLetters = Array(sortedByMostCommonLetters[0..<numberOfUnknownLetters])
+        }
+   
+        var bestChoice: String?
         var currentBestScore = 0
         
         for word in possibilities {
@@ -171,12 +186,14 @@ extension Game {
     func submitGuess() {
         guesses += [guessCurrentlyEditing]
         guessCurrentlyEditing = []
+        recommendedNextGuess = recommendedGuess() ?? possibleWords().first
     }
     
     func reset() {
         guessCurrentlyEditing = []
         guesses = []
         letterSelected = nil
+        recommendedNextGuess = nil 
         RigidImpactHaptic()
     }
 }
