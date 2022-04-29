@@ -8,22 +8,28 @@
 import SwiftUI
 import Primitives
 
-struct ShowSolutionsButton: View {
+struct ShowWordListButton: View {
     @State var isPresentingPossibleSolutions = false
     
     var body: some View {
         let numberOfWords = game.possibleWords().count
-        let text = numberOfWords > 0
-        ? "Show \(numberOfWords) Possible Solutions"
-        : "No possible words (retry)"
+        let text: String = {
+            switch numberOfWords {
+            case ...0:  return "No possible words (retry)"
+            case 2... : return "\(numberOfWords) possible words"
+            default:    return ""
+            }
+        }()
         
-        Button(text) {
+        Button(action:  {
             if numberOfWords > 0 {
                 isPresentingPossibleSolutions = true
                 SelectionHaptic()
             } else {
                 game.reset()
             }
+        }) {
+            Label(text, systemImage: "list.dash")
         }
         .font(.textButton)
         .transition(.moveLeftAndFade)
@@ -34,6 +40,7 @@ struct ShowSolutionsButton: View {
                 }
             }
         })
+        .disabled(numberOfWords < 1)
     }
     
     
@@ -42,7 +49,7 @@ struct ShowSolutionsButton: View {
 
 struct ShowSolutionsButton_Previews: PreviewProvider {
     static var previews: some View {
-        ShowSolutionsButton()
+        ShowWordListButton()
             .prepareForPreview(.oneGuess)
     }
 }

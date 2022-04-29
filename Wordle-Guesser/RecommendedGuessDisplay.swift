@@ -9,20 +9,24 @@ import SwiftUI
 
 struct RecommendedGuessDisplay: View {
     var word: String
+    
     var body: some View {
-        HStack {
-            Text("Recommended Next Guess:")
-                .font(.label)
+        VStack(alignment: .leading, spacing: 4) {
+            Text("Recommended Next Guess")
+                .font(.callout)
+                .foregroundColor(.black)
             
-            Spacer()
-            
-            Text(word)
-                .foregroundColor(.bestGuessForeground)
-                .font(.bestGuess)
-                .padding(4)
-                .background(Color.bestGuessBackground, in: .bestGuessShape)
+            HStack {
+                ForEach(0..<5) { letterIndex in
+                    Text(String(word[letterIndex]))
+                        .letterBoxStyle(color: .purple)
+                        .cornerRadius(3)
+                }
+            }
         }
-        .padding()
+        .padding(8)
+        .background(Color(white: 0.9))
+        .frame(maxWidth: .infinity)
         .transition(.moveLeftAndFade)
     }
     

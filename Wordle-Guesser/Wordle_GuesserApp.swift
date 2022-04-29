@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Wordle_GuesserApp: App {
+    @StateObject var game = Game()
+    
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environmentObject(game)
         }
     }
 }

@@ -27,6 +27,7 @@ extension Game {
     static let oneGuess: Game = {
         let game = Game()
         game.guesses.append(.firstGuess)
+        game.recommendedNextGuess = game.recommendedGuess()
         return game
     }()
 }

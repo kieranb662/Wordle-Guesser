@@ -12,7 +12,7 @@
 		8903E3442819C08500279EE7 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3432819C08500279EE7 /* Style.swift */; };
 		8903E3462819C9C400279EE7 /* ResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3452819C9C400279EE7 /* ResetButton.swift */; };
 		8903E3482819CA1F00279EE7 /* RecommendedGuessDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3472819CA1F00279EE7 /* RecommendedGuessDisplay.swift */; };
-		8903E34A2819CAB100279EE7 /* ShowSolutionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3492819CAB100279EE7 /* ShowSolutionsButton.swift */; };
+		8903E34A2819CAB100279EE7 /* ShowWordListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3492819CAB100279EE7 /* ShowWordListButton.swift */; };
 		8903E34C2819CB5500279EE7 /* ResultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E34B2819CB5500279EE7 /* ResultButton.swift */; };
 		8903E34E2819CBB300279EE7 /* SubmitGuessButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E34D2819CBB300279EE7 /* SubmitGuessButton.swift */; };
 		8903E3502819CE1700279EE7 /* PreviewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E34F2819CE1700279EE7 /* PreviewHelpers.swift */; };
@@ -33,7 +33,7 @@
 		8903E3432819C08500279EE7 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		8903E3452819C9C400279EE7 /* ResetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButton.swift; sourceTree = "<group>"; };
 		8903E3472819CA1F00279EE7 /* RecommendedGuessDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedGuessDisplay.swift; sourceTree = "<group>"; };
-		8903E3492819CAB100279EE7 /* ShowSolutionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSolutionsButton.swift; sourceTree = "<group>"; };
+		8903E3492819CAB100279EE7 /* ShowWordListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWordListButton.swift; sourceTree = "<group>"; };
 		8903E34B2819CB5500279EE7 /* ResultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultButton.swift; sourceTree = "<group>"; };
 		8903E34D2819CBB300279EE7 /* SubmitGuessButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitGuessButton.swift; sourceTree = "<group>"; };
 		8903E34F2819CE1700279EE7 /* PreviewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewHelpers.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 				8958AD072818AC7700F9FE03 /* RootView.swift */,
 				8903E3452819C9C400279EE7 /* ResetButton.swift */,
 				8903E3472819CA1F00279EE7 /* RecommendedGuessDisplay.swift */,
-				8903E3492819CAB100279EE7 /* ShowSolutionsButton.swift */,
+				8903E3492819CAB100279EE7 /* ShowWordListButton.swift */,
 				8903E34B2819CB5500279EE7 /* ResultButton.swift */,
 				8958AD192818B77500F9FE03 /* GuessViews.swift */,
 				8903E34F2819CE1700279EE7 /* PreviewHelpers.swift */,
@@ -190,7 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8903E34A2819CAB100279EE7 /* ShowSolutionsButton.swift in Sources */,
+				8903E34A2819CAB100279EE7 /* ShowWordListButton.swift in Sources */,
 				89B1D94A2819920E00EAA8D3 /* Keyboard.swift in Sources */,
 				8958AD082818AC7700F9FE03 /* RootView.swift in Sources */,
 				8903E34E2819CBB300279EE7 /* SubmitGuessButton.swift in Sources */,
@@ -330,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordle-Guesser/Preview Content\"";
 				DEVELOPMENT_TEAM = CJ3HCZ6WWQ;
 				ENABLE_PREVIEWS = YES;
@@ -361,7 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordle-Guesser/Preview Content\"";
 				DEVELOPMENT_TEAM = CJ3HCZ6WWQ;
 				ENABLE_PREVIEWS = YES;

@@ -9,12 +9,16 @@ import SwiftUI
 import Primitives
 
 struct RootView: View {
-    @StateObject var game = Game()
     
     var body: some View {
         VStack {
             
+            if let nextBestGuess = game.recommendedNextGuess {
+                RecommendedGuessDisplay(word: nextBestGuess)
+            }
+            
             HStack {
+                ShowWordListButton()
                 Spacer()
                 ResetButton()
             }
@@ -22,14 +26,6 @@ struct RootView: View {
             
             GuessView()
                 .padding(.horizontal)
-            
-            if let nextBestGuess = game.recommendedGuess() {
-                RecommendedGuessDisplay(word: nextBestGuess)
-            }
-            
-            if game.guesses.count > 0 {
-                ShowSolutionsButton()
-            }
             
             Spacer()
             
@@ -40,17 +36,22 @@ struct RootView: View {
                 if game.letterSelected == nil {
                     Keyboard()
                 } else {
-                    ResultButtons()
+                    ResultButtons().padding(.horizontal)
                 }
             }
         }
-        .padding()
+//        .padding()
+        .textCase(.uppercase)
         .environmentObject(game)
     }
+    
+    @EnvironmentObject var game: Game
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView().preferredColorScheme(.dark)
+        RootView()
+            .environmentObject(Game.oneGuess)
+            .preferredColorScheme(.dark)
     }
 }
