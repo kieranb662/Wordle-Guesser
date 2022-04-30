@@ -15,11 +15,18 @@ struct PossibleWordList: View {
         NavigationView {
             List {
                 ForEach(groups.keys.sorted(), id: \.self) { startingLetter in
-                    DisclosureGroup(startingLetter) {
+                    DisclosureGroup {
                         LazyVGrid(columns: [.init(.adaptive(minimum: 65), alignment: .leading)]) {
                             ForEach(groups[startingLetter]!.sorted(), id: \.self) { word in
                                 Text(word)
                             }
+                        }
+                    } label: {
+                        HStack {
+                            Text(startingLetter)
+                            Spacer()
+                            Text("\(groups[startingLetter]!.count) words")
+                                .textCase(.lowercase)
                         }
                     }
                 }
