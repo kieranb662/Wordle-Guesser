@@ -32,7 +32,7 @@ struct RootView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
-            .environmentObject(Game.firstGuessFilledButNotSubmitted)
+            .environmentObject(Game.oneGuess)
 //            .preferredColorScheme(.dark)
     }
 }

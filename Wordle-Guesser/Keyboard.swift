@@ -64,14 +64,22 @@ struct Keyboard: View {
                 
                 Button(action: {
                     withAnimation(.hideAndShow) {
-                        _ = game.guessCurrentlyEditing.removeLast()
+                        if game.letterSelected == nil && game.guessCurrentlyEditing.isEmpty &&
+                            game.guesses.count > 0 {
+                            
+                            game.guessCurrentlyEditing = game.guesses.removeLast()
+                            _ = game.guessCurrentlyEditing.removeLast()
+                            game.recommendedNextGuess = game.recommendedGuess()
+                            
+                        } else if !game.guessCurrentlyEditing.isEmpty {
+                            _ = game.guessCurrentlyEditing.removeLast()
+                        }
                     }
                 
                     LightImpactHaptic()
                 }) {
                     Image.backspace
                 }
-                .disabled(game.guessCurrentlyEditing.isEmpty)
                 .buttonStyle(KeyboardButtonStyle())
             }
         }
