@@ -30,6 +30,12 @@ extension Game {
         game.recommendedNextGuess = game.recommendedGuess()
         return game
     }()
+    
+    static let firstGuessFilledButNotSubmitted: Game = {
+        let game = Game()
+        game.guessCurrentlyEditing = .firstGuess
+        return game
+    }()
 }
 
 extension View {

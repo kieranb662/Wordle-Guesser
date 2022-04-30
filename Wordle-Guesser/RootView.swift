@@ -43,6 +43,13 @@ struct RootView: View {
             if game.guessCurrentlyEditing.count == 5 {
                 SubmitGuessButton()
                     .padding()
+                
+                Button("Reselect last letter") {
+                    withAnimation(.hideAndShow) {
+                        _ = game.guessCurrentlyEditing.removeLast()
+                    }
+                }
+                
                 Spacer()
             } else {
                 if game.letterSelected == nil {
@@ -62,7 +69,7 @@ struct RootView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
-            .environmentObject(Game.oneGuess)
+            .environmentObject(Game.firstGuessFilledButNotSubmitted)
 //            .preferredColorScheme(.dark)
     }
 }
