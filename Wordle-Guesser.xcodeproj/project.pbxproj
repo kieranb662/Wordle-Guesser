@@ -45,6 +45,7 @@
 		89116C60281D6C52004C45E4 /* PossibleWordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleWordList.swift; sourceTree = "<group>"; };
 		89116C62281D7BC4004C45E4 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		89116C64281D7C2B004C45E4 /* BottomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControls.swift; sourceTree = "<group>"; };
+		89116C66281D949F004C45E4 /* Wordle-Guesser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wordle-Guesser.entitlements"; sourceTree = "<group>"; };
 		8958AD022818AC7700F9FE03 /* Wordle-Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wordle-Guesser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordle_GuesserApp.swift; sourceTree = "<group>"; };
 		8958AD072818AC7700F9FE03 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		8958AD042818AC7700F9FE03 /* Wordle-Guesser */ = {
 			isa = PBXGroup;
 			children = (
+				89116C66281D949F004C45E4 /* Wordle-Guesser.entitlements */,
 				8903E3422819BAD800279EE7 /* Info.plist */,
 				8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */,
 				8958AD072818AC7700F9FE03 /* RootView.swift */,
@@ -341,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Wordle-Guesser/Wordle-Guesser.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordle-Guesser/Preview Content\"";
@@ -361,6 +364,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ElementsOfDesign.Wordle-Guesser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,6 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Wordle-Guesser/Wordle-Guesser.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordle-Guesser/Preview Content\"";
@@ -392,6 +397,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ElementsOfDesign.Wordle-Guesser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
