@@ -41,30 +41,4 @@ class Take_Screenshots: XCTestCase {
         app.tables.cells["b, 1 WORD"].children(matching: .other).element(boundBy: 0).children(matching: .other).element.tap()
         snapshot("Possible-Word-List")
     }
-    
-    func tap(_ buttonText: String) {
-        app.buttons[buttonText].tap()
-    }
-    
-    //
-    //    func test_Take_Screenshots() {
-    //        snapshot("Empty-State")
-    //        tap("a")
-    //        snapshot("Letter-A-Tapped")
-    //        tap("Not In Word")
-    //        tap("e")
-    //        tap("Correct Position")
-    //        tap("r")
-    //        tap("Not In Word")
-    //        tap("o")
-    //        tap("Not In Word")
-    //        tap("s")
-    //        tap("Wrong Position")
-    //        snapshot("First Guess Not Submitted")
-    //        tap("Submit Guess")
-    //        snapshot("Guess Submitted")
-    //        tap("33 possible words")
-    //        tap("a")
-    //        snapshot("Possible Word List")
-    //    }
 }
