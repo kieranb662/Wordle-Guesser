@@ -22,14 +22,16 @@ struct BottomControls: View {
                     MediumImpactHaptic()
                 }
             }
+            .frame(maxWidth: 413)
             .padding(.bottom)
             .transition(.moveDownAndFade)
            
         } else if game.letterSelected == nil {
             Keyboard()
-                .padding()
+                .padding(.vertical)
         } else {
             ResultButtons()
+                .frame(maxWidth: 413)
                 .padding()
         }
     }

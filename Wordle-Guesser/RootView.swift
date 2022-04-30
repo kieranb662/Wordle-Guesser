@@ -17,11 +17,13 @@ struct RootView: View {
                 .overlay(Color(white: 0.3).frame(height: 0.5), alignment: .bottom)
             
             GuessView()
+                .frame(maxHeight: 800)
                 .padding([.horizontal, .top])
             
             Spacer()
             
             BottomControls()
+                .frame(maxWidth: .infinity)
                 .background(.ultraThickMaterial)
                 .overlay(Color(white: 0.3).frame(height: 0.5), alignment: .top)
         }
@@ -34,8 +36,10 @@ struct RootView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
-            .environmentObject(Game.oneGuess)
-            .preferredColorScheme(.dark)
+//        RootView()
+//            .environmentObject(Game.firstGuessFilledButNotSubmitted)
+        
+        Canvas(models: [Game(), .noGuessesOneLetterSelected], deviceSize: .iPhone12Pro)
+        Canvas(models: [.firstGuessFilledButNotSubmitted, .oneGuess], deviceSize: .iPhone12Pro)
     }
 }

@@ -45,3 +45,29 @@ extension View {
             .previewLayout(.sizeThatFits)
     }
 }
+
+extension Game: Identifiable {}
+
+struct Canvas: View {
+    var models: [Game]
+    var deviceSize: CGSize
+    
+    var body: some View {
+        HStack(spacing: 8) {
+            ForEach(models) { game in
+                RootView()
+                    .background(.background)
+                    .frame(width: deviceSize.width, height: deviceSize.height)
+                    .environmentObject(game)
+            }
+        }
+        .background(Color(white: 101/255))
+        .previewLayout(.sizeThatFits)
+    }
+}
+
+extension CGSize {
+    static let iPhoneSE = CGSize(width: 320, height: 568)
+    static let iPhone12Pro = CGSize(width: 390, height: 844)
+    static let iPadPro12_9 = CGSize(width: 1024, height: 1366)
+}

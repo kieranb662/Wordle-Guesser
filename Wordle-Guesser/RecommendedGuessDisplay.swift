@@ -15,7 +15,6 @@ struct RecommendedGuessDisplay: View {
             Text("Recommended Next Guess")
                 .textCase(.none)
                 .font(.callout.weight(.semibold))
-                
             
             HStack(spacing: 3) {
                 ForEach(0..<5) { letterIndex in
@@ -23,10 +22,11 @@ struct RecommendedGuessDisplay: View {
                         .font(.title2)
                         .letterBoxStyle(color: Color(white: 0.2))
                         .cornerRadius(3)
+                        .frame(maxWidth: 48, maxHeight: 48)
                 }
             }
         }
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .transition(.moveLeftAndFade)
     }
     
