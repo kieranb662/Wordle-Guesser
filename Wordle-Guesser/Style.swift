@@ -37,9 +37,9 @@ extension Shape where Self == RoundedRectangle {
 let keyboardButtonSpacing = 5.0
 let keyboardHorizontalPadding = 10.0
 let maxLetterBoxSize = 200.0
-let resultButtonHeight = 36.0
+let resultButtonHeight = 30.0
 let submitButtonHeight = 36.0
-let resultButtonSpacing = 16.0
+let resultButtonSpacing = 12.0
 
 extension Image {
     static let backspace = Image(systemName: "delete.left")

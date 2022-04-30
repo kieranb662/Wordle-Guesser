@@ -24,6 +24,7 @@ struct RootView: View {
             
             BottomControls()
                 .frame(maxWidth: .infinity)
+                .frame(height: 4 * resultButtonHeight + 3 * resultButtonSpacing + 96)
                 .background(.ultraThickMaterial)
                 .overlay(Color(white: 0.3).frame(height: 0.5), alignment: .top)
         }

@@ -16,7 +16,7 @@ struct Header: View {
                 Spacer()
                 ResetButton()
             }
-            .padding(.horizontal)
+            .padding([.horizontal, .top])
             
             if let nextBestGuess = game.recommendedNextGuess {
                 RecommendedGuessDisplay(word: nextBestGuess)

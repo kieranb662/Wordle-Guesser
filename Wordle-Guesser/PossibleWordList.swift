@@ -25,7 +25,9 @@ struct PossibleWordList: View {
                         HStack {
                             Text(startingLetter)
                             Spacer()
-                            Text("\(groups[startingLetter]!.count) words")
+                            Text(groups[startingLetter]!.count > 1
+                                 ? "\(groups[startingLetter]!.count) words"
+                                 : "1 word")
                                 .textCase(.lowercase)
                         }
                     }

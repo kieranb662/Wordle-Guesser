@@ -10,7 +10,7 @@ import Primitives
 
 struct KeyboardButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
-        let baseWidth = min(UIScreen.main.bounds.width, 413)
+        let baseWidth = min(UIScreen.main.bounds.width, 500)
         let width = (baseWidth - 9 * keyboardButtonSpacing - 2 * keyboardHorizontalPadding) / 10
         return configuration.label
             .font(.keyboard)

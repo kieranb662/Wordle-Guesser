@@ -47,6 +47,7 @@ struct ResultButtons: View {
                 ErrorHaptic()
             })
             .font(.resultButton)
+            .frame(height: resultButtonHeight)
         }
         .transition(.moveDownAndFade)
     }
