@@ -19,6 +19,8 @@
 		8903E3522819D13100279EE7 /* RegexUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3512819D13100279EE7 /* RegexUtilities.swift */; };
 		8903E3542819D17100279EE7 /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3532819D17100279EE7 /* Guess.swift */; };
 		89116C61281D6C52004C45E4 /* PossibleWordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C60281D6C52004C45E4 /* PossibleWordList.swift */; };
+		89116C63281D7BC4004C45E4 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C62281D7BC4004C45E4 /* Header.swift */; };
+		89116C65281D7C2B004C45E4 /* BottomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C64281D7C2B004C45E4 /* BottomControls.swift */; };
 		8958AD062818AC7700F9FE03 /* Wordle_GuesserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */; };
 		8958AD082818AC7700F9FE03 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD072818AC7700F9FE03 /* RootView.swift */; };
 		8958AD0A2818AC7800F9FE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD092818AC7800F9FE03 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		8903E3512819D13100279EE7 /* RegexUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexUtilities.swift; sourceTree = "<group>"; };
 		8903E3532819D17100279EE7 /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
 		89116C60281D6C52004C45E4 /* PossibleWordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleWordList.swift; sourceTree = "<group>"; };
+		89116C62281D7BC4004C45E4 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		89116C64281D7C2B004C45E4 /* BottomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControls.swift; sourceTree = "<group>"; };
 		8958AD022818AC7700F9FE03 /* Wordle-Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wordle-Guesser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordle_GuesserApp.swift; sourceTree = "<group>"; };
 		8958AD072818AC7700F9FE03 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				8903E3422819BAD800279EE7 /* Info.plist */,
 				8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */,
 				8958AD072818AC7700F9FE03 /* RootView.swift */,
+				89116C64281D7C2B004C45E4 /* BottomControls.swift */,
+				89116C62281D7BC4004C45E4 /* Header.swift */,
 				8903E3452819C9C400279EE7 /* ResetButton.swift */,
 				8903E3472819CA1F00279EE7 /* RecommendedGuessDisplay.swift */,
 				8903E3492819CAB100279EE7 /* ShowWordListButton.swift */,
@@ -193,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89116C63281D7BC4004C45E4 /* Header.swift in Sources */,
 				8903E34A2819CAB100279EE7 /* ShowWordListButton.swift in Sources */,
 				89B1D94A2819920E00EAA8D3 /* Keyboard.swift in Sources */,
 				8958AD082818AC7700F9FE03 /* RootView.swift in Sources */,
@@ -204,6 +211,7 @@
 				8958AD062818AC7700F9FE03 /* Wordle_GuesserApp.swift in Sources */,
 				8903E3482819CA1F00279EE7 /* RecommendedGuessDisplay.swift in Sources */,
 				8958AD1A2818B77500F9FE03 /* GuessViews.swift in Sources */,
+				89116C65281D7C2B004C45E4 /* BottomControls.swift in Sources */,
 				8903E3542819D17100279EE7 /* Guess.swift in Sources */,
 				8903E3462819C9C400279EE7 /* ResetButton.swift in Sources */,
 				8903E3442819C08500279EE7 /* Style.swift in Sources */,

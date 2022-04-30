@@ -13,58 +13,20 @@ struct RootView: View {
     var body: some View {
         VStack {
             
-            
-            VStack {
-                
-                HStack {
-                    ShowWordListButton()
-                    Spacer()
-                    ResetButton()
-                }.padding(.horizontal)
-                
-                
-                if let nextBestGuess = game.recommendedNextGuess {
-                    RecommendedGuessDisplay(word: nextBestGuess)
-                        .padding(.horizontal)
-                }
-                
-                Spacer()
-                    .frame(height: 12)
-                
-            }
-            .background(.thickMaterial)
-            
+            Header()
             
             GuessView()
                 .padding([.horizontal, .top])
             
             Spacer()
             
-            if game.guessCurrentlyEditing.count == 5 {
-                SubmitGuessButton()
-                    .padding()
-                
-                Button("Reselect last letter") {
-                    withAnimation(.hideAndShow) {
-                        _ = game.guessCurrentlyEditing.removeLast()
-                    }
-                    MediumImpactHaptic()
-                }
-                
-                Spacer()
-            } else {
-                if game.letterSelected == nil {
-                    Keyboard().padding()
-                } else {
-                    ResultButtons().padding()
-                }
-            }
+            BottomControls()
         }
         .textCase(.uppercase)
         .environmentObject(game)
     }
     
-    @EnvironmentObject var game: Game
+    @EnvironmentObject private var game: Game
 }
 
 struct ContentView_Previews: PreviewProvider {
