@@ -9,14 +9,6 @@ import Foundation
 import SwiftUI
 import Primitives
 
-extension Guess {
-    var hasRepeatedLetters: Bool {
-        
-        return false
-    }
-    
-}
-
 // MARK: - Declaration
 
 class Game: ObservableObject {
@@ -83,7 +75,7 @@ extension Game {
         let results = regex.capture(in: wordList)
         let lettersInWrongPosition = lettersInWrongPosition.map(\.character)
         return results
-//            .filter({ lettersInWrongPosition.allSatisfy($0.value.contains) })
+            .filter({ lettersInWrongPosition.allSatisfy($0.value.contains) })
             .map(\.value)
     }
 }
