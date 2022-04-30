@@ -17,7 +17,7 @@ struct RecommendedGuessDisplay: View {
                 .font(.callout.weight(.semibold))
                 
             
-            HStack(spacing: 1) {
+            HStack(spacing: 3) {
                 ForEach(0..<5) { letterIndex in
                     Text(String(word[letterIndex]))
                         .font(.title2)

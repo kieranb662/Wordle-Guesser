@@ -14,6 +14,7 @@ struct RootView: View {
         VStack {
             
             Header()
+                .overlay(Color(white: 0.3).frame(height: 0.5), alignment: .bottom)
             
             GuessView()
                 .padding([.horizontal, .top])
@@ -21,6 +22,8 @@ struct RootView: View {
             Spacer()
             
             BottomControls()
+                .background(.ultraThickMaterial)
+                .overlay(Color(white: 0.3).frame(height: 0.5), alignment: .top)
         }
         .textCase(.uppercase)
         .environmentObject(game)
@@ -33,6 +36,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
             .environmentObject(Game.oneGuess)
-//            .preferredColorScheme(.dark)
+            .preferredColorScheme(.dark)
     }
 }

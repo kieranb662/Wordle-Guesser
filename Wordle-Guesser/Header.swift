@@ -26,7 +26,7 @@ struct Header: View {
             Spacer()
                 .frame(height: 12)
         }
-        .background(.thickMaterial)
+        .background(.ultraThickMaterial)
     }
     
     @EnvironmentObject private var game: Game
