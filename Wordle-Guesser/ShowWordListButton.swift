@@ -33,13 +33,9 @@ struct ShowWordListButton: View {
         }
         .font(.textButton)
         .transition(.moveLeftAndFade)
-        .sheet(isPresented: $isPresentingPossibleSolutions, content: {
-            List {
-                ForEach(game.possibleWords().sorted(), id: \.self) { word in
-                    Text(word)
-                }
-            }
-        })
+        .sheet(isPresented: $isPresentingPossibleSolutions) {
+            PossibleWordList(words: game.possibleWords())
+        }
         .disabled(numberOfWords < 1)
     }
     
