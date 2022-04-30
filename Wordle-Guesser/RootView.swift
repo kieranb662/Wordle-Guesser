@@ -48,6 +48,7 @@ struct RootView: View {
                     withAnimation(.hideAndShow) {
                         _ = game.guessCurrentlyEditing.removeLast()
                     }
+                    MediumImpactHaptic()
                 }
                 
                 Spacer()
