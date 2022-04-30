@@ -11,9 +11,9 @@ import Primitives
 struct ResetButton: View {
     var body: some View {
         Button("Reset", action: game.reset)
-        .font(.textButton)
-        .tint(.destructiveAction)
-        .disabled(game.guesses.count == 0)
+            .font(.textButton)
+            .tint(.destructiveAction)
+            .disabled(game.guesses.count == 0)
     }
     
     @EnvironmentObject private var game: Game

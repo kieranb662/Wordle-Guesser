@@ -11,21 +11,21 @@ struct RecommendedGuessDisplay: View {
     var word: String
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        HStack {
             Text("Recommended Next Guess")
-                .font(.callout)
-                .foregroundColor(.black)
+                .textCase(.none)
+                .font(.callout.weight(.semibold))
+                
             
-            HStack {
+            HStack(spacing: 1) {
                 ForEach(0..<5) { letterIndex in
                     Text(String(word[letterIndex]))
-                        .letterBoxStyle(color: .purple)
+                        .font(.title2)
+                        .letterBoxStyle(color: Color(white: 0.2))
                         .cornerRadius(3)
                 }
             }
         }
-        .padding(8)
-        .background(Color(white: 0.9))
         .frame(maxWidth: .infinity)
         .transition(.moveLeftAndFade)
     }

@@ -13,34 +13,45 @@ struct RootView: View {
     var body: some View {
         VStack {
             
-            if let nextBestGuess = game.recommendedNextGuess {
-                RecommendedGuessDisplay(word: nextBestGuess)
-            }
             
-            HStack {
-                ShowWordListButton()
+            VStack {
+                
+                HStack {
+                    ShowWordListButton()
+                    Spacer()
+                    ResetButton()
+                }.padding(.horizontal)
+                
+                
+                if let nextBestGuess = game.recommendedNextGuess {
+                    RecommendedGuessDisplay(word: nextBestGuess)
+                        .padding(.horizontal)
+                }
+                
                 Spacer()
-                ResetButton()
+                    .frame(height: 12)
+                
             }
-            .padding()
+            .background(.thickMaterial)
+            
             
             GuessView()
-                .padding(.horizontal)
+                .padding([.horizontal, .top])
             
             Spacer()
             
             if game.guessCurrentlyEditing.count == 5 {
                 SubmitGuessButton()
+                    .padding()
                 Spacer()
             } else {
                 if game.letterSelected == nil {
-                    Keyboard()
+                    Keyboard().padding()
                 } else {
-                    ResultButtons().padding(.horizontal)
+                    ResultButtons().padding()
                 }
             }
         }
-//        .padding()
         .textCase(.uppercase)
         .environmentObject(game)
     }
@@ -52,6 +63,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
             .environmentObject(Game.oneGuess)
-            .preferredColorScheme(.dark)
+//            .preferredColorScheme(.dark)
     }
 }
