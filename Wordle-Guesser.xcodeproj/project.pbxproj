@@ -21,6 +21,8 @@
 		89116C61281D6C52004C45E4 /* PossibleWordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C60281D6C52004C45E4 /* PossibleWordList.swift */; };
 		89116C63281D7BC4004C45E4 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C62281D7BC4004C45E4 /* Header.swift */; };
 		89116C65281D7C2B004C45E4 /* BottomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C64281D7C2B004C45E4 /* BottomControls.swift */; };
+		89116C6E281D9DE9004C45E4 /* Take_Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C6D281D9DE9004C45E4 /* Take_Screenshots.swift */; };
+		89116C77281D9E1B004C45E4 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C76281D9E1B004C45E4 /* SnapshotHelper.swift */; };
 		8958AD062818AC7700F9FE03 /* Wordle_GuesserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */; };
 		8958AD082818AC7700F9FE03 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD072818AC7700F9FE03 /* RootView.swift */; };
 		8958AD0A2818AC7800F9FE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD092818AC7800F9FE03 /* Assets.xcassets */; };
@@ -30,6 +32,16 @@
 		8958AD1A2818B77500F9FE03 /* GuessViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD192818B77500F9FE03 /* GuessViews.swift */; };
 		89B1D94A2819920E00EAA8D3 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1D9492819920E00EAA8D3 /* Keyboard.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89116C71281D9DE9004C45E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8958ACFA2818AC7700F9FE03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8958AD012818AC7700F9FE03;
+			remoteInfo = "Wordle-Guesser";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8903E3422819BAD800279EE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +58,9 @@
 		89116C62281D7BC4004C45E4 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		89116C64281D7C2B004C45E4 /* BottomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControls.swift; sourceTree = "<group>"; };
 		89116C66281D949F004C45E4 /* Wordle-Guesser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Wordle-Guesser.entitlements"; sourceTree = "<group>"; };
+		89116C6B281D9DE9004C45E4 /* Take-Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Take-Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89116C6D281D9DE9004C45E4 /* Take_Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take_Screenshots.swift; sourceTree = "<group>"; };
+		89116C76281D9E1B004C45E4 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = "Take-Screenshots/SnapshotHelper.swift"; sourceTree = SOURCE_ROOT; };
 		8958AD022818AC7700F9FE03 /* Wordle-Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wordle-Guesser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordle_GuesserApp.swift; sourceTree = "<group>"; };
 		8958AD072818AC7700F9FE03 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -58,6 +73,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		89116C68281D9DE9004C45E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8958ACFF2818AC7700F9FE03 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,10 +92,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89116C6C281D9DE9004C45E4 /* Take-Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				89116C76281D9E1B004C45E4 /* SnapshotHelper.swift */,
+				89116C6D281D9DE9004C45E4 /* Take_Screenshots.swift */,
+			);
+			path = "Take-Screenshots";
+			sourceTree = "<group>";
+		};
 		8958ACF92818AC7700F9FE03 = {
 			isa = PBXGroup;
 			children = (
 				8958AD042818AC7700F9FE03 /* Wordle-Guesser */,
+				89116C6C281D9DE9004C45E4 /* Take-Screenshots */,
 				8958AD032818AC7700F9FE03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				8958AD022818AC7700F9FE03 /* Wordle-Guesser.app */,
+				89116C6B281D9DE9004C45E4 /* Take-Screenshots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +159,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		89116C6A281D9DE9004C45E4 /* Take-Screenshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89116C73281D9DE9004C45E4 /* Build configuration list for PBXNativeTarget "Take-Screenshots" */;
+			buildPhases = (
+				89116C67281D9DE9004C45E4 /* Sources */,
+				89116C68281D9DE9004C45E4 /* Frameworks */,
+				89116C69281D9DE9004C45E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89116C72281D9DE9004C45E4 /* PBXTargetDependency */,
+			);
+			name = "Take-Screenshots";
+			productName = "Take-Screenshots";
+			productReference = 89116C6B281D9DE9004C45E4 /* Take-Screenshots.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		8958AD012818AC7700F9FE03 /* Wordle-Guesser */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8958AD102818AC7800F9FE03 /* Build configuration list for PBXNativeTarget "Wordle-Guesser" */;
@@ -157,6 +208,10 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					89116C6A281D9DE9004C45E4 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 8958AD012818AC7700F9FE03;
+					};
 					8958AD012818AC7700F9FE03 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -179,11 +234,19 @@
 			projectRoot = "";
 			targets = (
 				8958AD012818AC7700F9FE03 /* Wordle-Guesser */,
+				89116C6A281D9DE9004C45E4 /* Take-Screenshots */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		89116C69281D9DE9004C45E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8958AD002818AC7700F9FE03 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +260,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		89116C67281D9DE9004C45E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89116C6E281D9DE9004C45E4 /* Take_Screenshots.swift in Sources */,
+				89116C77281D9E1B004C45E4 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8958ACFE2818AC7700F9FE03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,7 +295,49 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		89116C72281D9DE9004C45E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8958AD012818AC7700F9FE03 /* Wordle-Guesser */;
+			targetProxy = 89116C71281D9DE9004C45E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		89116C74281D9DE9004C45E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CJ3HCZ6WWQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ElementsOfDesign.Take-Screenshots";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wordle-Guesser";
+			};
+			name = Debug;
+		};
+		89116C75281D9DE9004C45E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CJ3HCZ6WWQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ElementsOfDesign.Take-Screenshots";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wordle-Guesser";
+			};
+			name = Release;
+		};
 		8958AD0E2818AC7800F9FE03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -355,8 +469,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,7 +478,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ElementsOfDesign.Wordle-Guesser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -388,8 +502,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,7 +511,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ElementsOfDesign.Wordle-Guesser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -407,6 +521,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		89116C73281D9DE9004C45E4 /* Build configuration list for PBXNativeTarget "Take-Screenshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89116C74281D9DE9004C45E4 /* Debug */,
+				89116C75281D9DE9004C45E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8958ACFD2818AC7700F9FE03 /* Build configuration list for PBXProject "Wordle-Guesser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
