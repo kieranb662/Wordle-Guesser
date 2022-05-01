@@ -29,7 +29,7 @@ struct ShowWordListButton: View {
                 game.reset()
             }
         }) {
-            Label(text, systemImage: "list.dash")
+            Label(game.isFinished ? "No possible words (retry)" : text, systemImage: "list.dash")
         }
         .font(.textButton)
         .transition(.moveLeftAndFade)

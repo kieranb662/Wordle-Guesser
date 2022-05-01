@@ -18,7 +18,8 @@ struct Header: View {
             }
             .padding([.horizontal, .top])
             
-            if let nextBestGuess = game.recommendedNextGuess {
+            if let nextBestGuess = game.recommendedNextGuess,
+               !game.isFinished {
                 RecommendedGuessDisplay(word: nextBestGuess)
                     .padding(.horizontal)
             }

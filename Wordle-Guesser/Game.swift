@@ -16,6 +16,10 @@ class Game: ObservableObject {
     @Published var guessCurrentlyEditing: Guess = []
     @Published var letterSelected: String?
     @Published var recommendedNextGuess: String?
+    var isFinished: Bool {
+        guessCurrentlyEditing.count == 5 &&
+        guessCurrentlyEditing.allSatisfy({ $0.result == .rightPosition })
+    }
     
     var lettersInWrongPosition: [(position: Int, character: String)] {
         return guesses.flatMap { guess in

@@ -39,7 +39,7 @@ struct PossibleWordList: View {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: dismiss.callAsFunction) {
                         Image(systemName: "xmark")
-                    }
+                    }.accessibilityLabel("xmark")
                 }
             }
         }

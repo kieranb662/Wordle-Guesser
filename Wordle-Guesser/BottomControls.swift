@@ -12,9 +12,12 @@ struct BottomControls: View {
     var body: some View {
         if game.guessCurrentlyEditing.count == 5 {
             VStack {
-                SubmitGuessButton()
-                    .padding()
                 
+                if !game.isFinished {
+                    SubmitGuessButton()
+                        .padding()
+                }
+        
                 Button("Reselect last letter") {
                     withAnimation(.hideAndShow) {
                         _ = game.guessCurrentlyEditing.removeLast()
