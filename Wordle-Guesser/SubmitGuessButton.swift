@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Primitives
 
 struct SubmitGuessButton: View {
     var body: some View {

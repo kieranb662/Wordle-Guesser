@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Primitives
 
 struct ShowWordListButton: View {
     @State var isPresentingPossibleSolutions = false
@@ -36,7 +35,7 @@ struct ShowWordListButton: View {
         .sheet(isPresented: $isPresentingPossibleSolutions) {
             PossibleWordList(words: game.possibleWords())
         }
-        .disabled(numberOfWords < 1)
+        .disabled(numberOfWords < 1 || game.isFinished)
     }
     
     

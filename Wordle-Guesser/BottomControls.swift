@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Primitives
 
 struct BottomControls: View {
     var body: some View {

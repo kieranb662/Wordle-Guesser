@@ -22,6 +22,10 @@ extension String {
         
         return String(self[range])
     }
+    
+    subscript(_ index: Int) -> Character {
+        return self[self.index(self.startIndex, offsetBy: index)]
+    }
 }
 
 struct CaptureResult {

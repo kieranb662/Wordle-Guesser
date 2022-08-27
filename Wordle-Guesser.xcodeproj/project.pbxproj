@@ -21,29 +21,7 @@
 		89116C65281D7C2B004C45E4 /* BottomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C64281D7C2B004C45E4 /* BottomControls.swift */; };
 		89116C6E281D9DE9004C45E4 /* Take_Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C6D281D9DE9004C45E4 /* Take_Screenshots.swift */; };
 		89116C77281D9E1B004C45E4 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C76281D9E1B004C45E4 /* SnapshotHelper.swift */; };
-		89116C86281F4DFE004C45E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89116C85281F4DFE004C45E4 /* Preview Assets.xcassets */; };
-		89116C8B281F4DFE004C45E4 /* Wordle-Guesser-App-Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 89116C7C281F4DFD004C45E4 /* Wordle-Guesser-App-Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		89116C90281F4E6B004C45E4 /* 5-letter-words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD152818ACA200F9FE03 /* 5-letter-words.txt */; };
-		89116C91281F4E6B004C45E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD092818AC7800F9FE03 /* Assets.xcassets */; };
-		89116C92281F4E6B004C45E4 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C62281D7BC4004C45E4 /* Header.swift */; };
-		89116C93281F4E6B004C45E4 /* RegexUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3512819D13100279EE7 /* RegexUtilities.swift */; };
-		89116C94281F4E6B004C45E4 /* BottomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C64281D7C2B004C45E4 /* BottomControls.swift */; };
-		89116C95281F4E6B004C45E4 /* RecommendedGuessDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3472819CA1F00279EE7 /* RecommendedGuessDisplay.swift */; };
-		89116C96281F4E6B004C45E4 /* PreviewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E34F2819CE1700279EE7 /* PreviewHelpers.swift */; };
-		89116C97281F4E6B004C45E4 /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3532819D17100279EE7 /* Guess.swift */; };
-		89116C98281F4E6B004C45E4 /* ResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3452819C9C400279EE7 /* ResetButton.swift */; };
-		89116C99281F4E6B004C45E4 /* GuessViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD192818B77500F9FE03 /* GuessViews.swift */; };
-		89116C9A281F4E6B004C45E4 /* SubmitGuessButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E34D2819CBB300279EE7 /* SubmitGuessButton.swift */; };
-		89116C9B281F4E6B004C45E4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD072818AC7700F9FE03 /* RootView.swift */; };
-		89116C9C281F4E6B004C45E4 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1D9492819920E00EAA8D3 /* Keyboard.swift */; };
-		89116C9D281F4E6B004C45E4 /* Wordle_GuesserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */; };
-		89116C9E281F4E6B004C45E4 /* ResultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E34B2819CB5500279EE7 /* ResultButton.swift */; };
-		89116C9F281F4E6B004C45E4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD132818AC8400F9FE03 /* Game.swift */; };
-		89116CA0281F4E6B004C45E4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3432819C08500279EE7 /* Style.swift */; };
-		89116CA1281F4E6B004C45E4 /* ShowWordListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8903E3492819CAB100279EE7 /* ShowWordListButton.swift */; };
-		89116CA2281F4E6B004C45E4 /* PossibleWordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89116C60281D6C52004C45E4 /* PossibleWordList.swift */; };
-		89116CA8281F4F63004C45E4 /* UITools in Frameworks */ = {isa = PBXBuildFile; productRef = 89116CA7281F4F63004C45E4 /* UITools */; };
-		89116CAB281F4F71004C45E4 /* UITools in Frameworks */ = {isa = PBXBuildFile; productRef = 89116CAA281F4F71004C45E4 /* UITools */; };
+		894FB74928BA9B010043D891 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FB74828BA9B010043D891 /* Haptics.swift */; };
 		8958AD062818AC7700F9FE03 /* Wordle_GuesserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */; };
 		8958AD082818AC7700F9FE03 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8958AD072818AC7700F9FE03 /* RootView.swift */; };
 		8958AD0A2818AC7800F9FE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8958AD092818AC7800F9FE03 /* Assets.xcassets */; };
@@ -62,13 +40,6 @@
 			remoteGlobalIDString = 8958AD012818AC7700F9FE03;
 			remoteInfo = "Wordle-Guesser";
 		};
-		89116C89281F4DFE004C45E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8958ACFA2818AC7700F9FE03 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 89116C7B281F4DFD004C45E4;
-			remoteInfo = "Wordle-Guesser-App-Clip";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -78,7 +49,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
 			dstSubfolderSpec = 16;
 			files = (
-				89116C8B281F4DFE004C45E4 /* Wordle-Guesser-App-Clip.app in Embed App Clips */,
 			);
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,11 +73,8 @@
 		89116C6B281D9DE9004C45E4 /* Take-Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Take-Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89116C6D281D9DE9004C45E4 /* Take_Screenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take_Screenshots.swift; sourceTree = "<group>"; };
 		89116C76281D9E1B004C45E4 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = "Take-Screenshots/SnapshotHelper.swift"; sourceTree = SOURCE_ROOT; };
-		89116C7C281F4DFD004C45E4 /* Wordle-Guesser-App-Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wordle-Guesser-App-Clip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		89116C85281F4DFE004C45E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		89116C87281F4DFE004C45E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89116C88281F4DFE004C45E4 /* Wordle_Guesser_App_Clip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wordle_Guesser_App_Clip.entitlements; sourceTree = "<group>"; };
 		89116CAC281F5C14004C45E4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		894FB74828BA9B010043D891 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		8958AD022818AC7700F9FE03 /* Wordle-Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wordle-Guesser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8958AD052818AC7700F9FE03 /* Wordle_GuesserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordle_GuesserApp.swift; sourceTree = "<group>"; };
 		8958AD072818AC7700F9FE03 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -127,19 +94,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89116C79281F4DFD004C45E4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				89116CAB281F4F71004C45E4 /* UITools in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8958ACFF2818AC7700F9FE03 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89116CA8281F4F63004C45E4 /* UITools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,24 +113,6 @@
 			path = "Take-Screenshots";
 			sourceTree = "<group>";
 		};
-		89116C7D281F4DFD004C45E4 /* Wordle-Guesser-App-Clip */ = {
-			isa = PBXGroup;
-			children = (
-				89116C87281F4DFE004C45E4 /* Info.plist */,
-				89116C88281F4DFE004C45E4 /* Wordle_Guesser_App_Clip.entitlements */,
-				89116C84281F4DFE004C45E4 /* Preview Content */,
-			);
-			path = "Wordle-Guesser-App-Clip";
-			sourceTree = "<group>";
-		};
-		89116C84281F4DFE004C45E4 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				89116C85281F4DFE004C45E4 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		89116CA9281F4F71004C45E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +126,6 @@
 				89116CAC281F5C14004C45E4 /* README.md */,
 				8958AD042818AC7700F9FE03 /* Wordle-Guesser */,
 				89116C6C281D9DE9004C45E4 /* Take-Screenshots */,
-				89116C7D281F4DFD004C45E4 /* Wordle-Guesser-App-Clip */,
 				8958AD032818AC7700F9FE03 /* Products */,
 				89116CA9281F4F71004C45E4 /* Frameworks */,
 			);
@@ -197,7 +136,6 @@
 			children = (
 				8958AD022818AC7700F9FE03 /* Wordle-Guesser.app */,
 				89116C6B281D9DE9004C45E4 /* Take-Screenshots.xctest */,
-				89116C7C281F4DFD004C45E4 /* Wordle-Guesser-App-Clip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,6 +162,7 @@
 				8958AD132818AC8400F9FE03 /* Game.swift */,
 				8903E3532819D17100279EE7 /* Guess.swift */,
 				8903E3512819D13100279EE7 /* RegexUtilities.swift */,
+				894FB74828BA9B010043D891 /* Haptics.swift */,
 				8958AD152818ACA200F9FE03 /* 5-letter-words.txt */,
 				8958AD092818AC7800F9FE03 /* Assets.xcassets */,
 				8958AD0B2818AC7800F9FE03 /* Preview Content */,
@@ -260,26 +199,6 @@
 			productReference = 89116C6B281D9DE9004C45E4 /* Take-Screenshots.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		89116C7B281F4DFD004C45E4 /* Wordle-Guesser-App-Clip */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 89116C8C281F4DFE004C45E4 /* Build configuration list for PBXNativeTarget "Wordle-Guesser-App-Clip" */;
-			buildPhases = (
-				89116C78281F4DFD004C45E4 /* Sources */,
-				89116C79281F4DFD004C45E4 /* Frameworks */,
-				89116C7A281F4DFD004C45E4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Wordle-Guesser-App-Clip";
-			packageProductDependencies = (
-				89116CAA281F4F71004C45E4 /* UITools */,
-			);
-			productName = "Wordle-Guesser-App-Clip";
-			productReference = 89116C7C281F4DFD004C45E4 /* Wordle-Guesser-App-Clip.app */;
-			productType = "com.apple.product-type.application.on-demand-install-capable";
-		};
 		8958AD012818AC7700F9FE03 /* Wordle-Guesser */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8958AD102818AC7800F9FE03 /* Build configuration list for PBXNativeTarget "Wordle-Guesser" */;
@@ -292,11 +211,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				89116C8A281F4DFE004C45E4 /* PBXTargetDependency */,
 			);
 			name = "Wordle-Guesser";
 			packageProductDependencies = (
-				89116CA7281F4F63004C45E4 /* UITools */,
 			);
 			productName = "Wordle-Guesser";
 			productReference = 8958AD022818AC7700F9FE03 /* Wordle-Guesser.app */;
@@ -316,9 +233,6 @@
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = 8958AD012818AC7700F9FE03;
 					};
-					89116C7B281F4DFD004C45E4 = {
-						CreatedOnToolsVersion = 13.3;
-					};
 					8958AD012818AC7700F9FE03 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -334,7 +248,6 @@
 			);
 			mainGroup = 8958ACF92818AC7700F9FE03;
 			packageReferences = (
-				89116CA6281F4F63004C45E4 /* XCRemoteSwiftPackageReference "UITools" */,
 			);
 			productRefGroup = 8958AD032818AC7700F9FE03 /* Products */;
 			projectDirPath = "";
@@ -342,7 +255,6 @@
 			targets = (
 				8958AD012818AC7700F9FE03 /* Wordle-Guesser */,
 				89116C6A281D9DE9004C45E4 /* Take-Screenshots */,
-				89116C7B281F4DFD004C45E4 /* Wordle-Guesser-App-Clip */,
 			);
 		};
 /* End PBXProject section */
@@ -352,16 +264,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		89116C7A281F4DFD004C45E4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				89116C90281F4E6B004C45E4 /* 5-letter-words.txt in Resources */,
-				89116C86281F4DFE004C45E4 /* Preview Assets.xcassets in Resources */,
-				89116C91281F4E6B004C45E4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,34 +289,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89116C78281F4DFD004C45E4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				89116C94281F4E6B004C45E4 /* BottomControls.swift in Sources */,
-				89116CA1281F4E6B004C45E4 /* ShowWordListButton.swift in Sources */,
-				89116C95281F4E6B004C45E4 /* RecommendedGuessDisplay.swift in Sources */,
-				89116C9D281F4E6B004C45E4 /* Wordle_GuesserApp.swift in Sources */,
-				89116C92281F4E6B004C45E4 /* Header.swift in Sources */,
-				89116C99281F4E6B004C45E4 /* GuessViews.swift in Sources */,
-				89116C9C281F4E6B004C45E4 /* Keyboard.swift in Sources */,
-				89116C93281F4E6B004C45E4 /* RegexUtilities.swift in Sources */,
-				89116C97281F4E6B004C45E4 /* Guess.swift in Sources */,
-				89116C9E281F4E6B004C45E4 /* ResultButton.swift in Sources */,
-				89116C9B281F4E6B004C45E4 /* RootView.swift in Sources */,
-				89116C9A281F4E6B004C45E4 /* SubmitGuessButton.swift in Sources */,
-				89116C98281F4E6B004C45E4 /* ResetButton.swift in Sources */,
-				89116CA0281F4E6B004C45E4 /* Style.swift in Sources */,
-				89116C96281F4E6B004C45E4 /* PreviewHelpers.swift in Sources */,
-				89116CA2281F4E6B004C45E4 /* PossibleWordList.swift in Sources */,
-				89116C9F281F4E6B004C45E4 /* Game.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8958ACFE2818AC7700F9FE03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894FB74928BA9B010043D891 /* Haptics.swift in Sources */,
 				89116C63281D7BC4004C45E4 /* Header.swift in Sources */,
 				8903E34A2819CAB100279EE7 /* ShowWordListButton.swift in Sources */,
 				89B1D94A2819920E00EAA8D3 /* Keyboard.swift in Sources */,
@@ -442,11 +321,6 @@
 			isa = PBXTargetDependency;
 			target = 8958AD012818AC7700F9FE03 /* Wordle-Guesser */;
 			targetProxy = 89116C71281D9DE9004C45E4 /* PBXContainerItemProxy */;
-		};
-		89116C8A281F4DFE004C45E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 89116C7B281F4DFD004C45E4 /* Wordle-Guesser-App-Clip */;
-			targetProxy = 89116C89281F4DFE004C45E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -482,70 +356,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Wordle-Guesser";
-			};
-			name = Release;
-		};
-		89116C8D281F4DFE004C45E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Wordle-Guesser-App-Clip/Wordle_Guesser_App_Clip.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_ASSET_PATHS = "\"Wordle-Guesser-App-Clip/Preview Content\"";
-				DEVELOPMENT_TEAM = CJ3HCZ6WWQ;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Wordle-Guesser-App-Clip/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Wordle-Guesser";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ElementsOfDesign.Wordle-Guesser.Clip";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		89116C8E281F4DFE004C45E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Wordle-Guesser-App-Clip/Wordle_Guesser_App_Clip.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
-				DEVELOPMENT_ASSET_PATHS = "\"Wordle-Guesser-App-Clip/Preview Content\"";
-				DEVELOPMENT_TEAM = CJ3HCZ6WWQ;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Wordle-Guesser-App-Clip/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Wordle-Guesser";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ElementsOfDesign.Wordle-Guesser.Clip";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -671,13 +481,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Wordle-Guesser/Wordle-Guesser.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordle-Guesser/Preview Content\"";
 				DEVELOPMENT_TEAM = CJ3HCZ6WWQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Wordle-Guesser/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Wordle Guesser";
+				INFOPLIST_KEY_CFBundleDisplayName = "5 Letter Word Finder";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -706,13 +516,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Wordle-Guesser/Wordle-Guesser.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordle-Guesser/Preview Content\"";
 				DEVELOPMENT_TEAM = CJ3HCZ6WWQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Wordle-Guesser/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Wordle Guesser";
+				INFOPLIST_KEY_CFBundleDisplayName = "5 Letter Word Finder";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -745,15 +555,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89116C8C281F4DFE004C45E4 /* Build configuration list for PBXNativeTarget "Wordle-Guesser-App-Clip" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				89116C8D281F4DFE004C45E4 /* Debug */,
-				89116C8E281F4DFE004C45E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8958ACFD2818AC7700F9FE03 /* Build configuration list for PBXProject "Wordle-Guesser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -773,30 +574,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		89116CA6281F4F63004C45E4 /* XCRemoteSwiftPackageReference "UITools" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kieranb662/UITools";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		89116CA7281F4F63004C45E4 /* UITools */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 89116CA6281F4F63004C45E4 /* XCRemoteSwiftPackageReference "UITools" */;
-			productName = UITools;
-		};
-		89116CAA281F4F71004C45E4 /* UITools */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 89116CA6281F4F63004C45E4 /* XCRemoteSwiftPackageReference "UITools" */;
-			productName = UITools;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8958ACFA2818AC7700F9FE03 /* Project object */;
 }

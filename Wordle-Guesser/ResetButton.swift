@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Primitives
 
 struct ResetButton: View {
     var body: some View {

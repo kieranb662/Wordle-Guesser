@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Primitives
 
 struct RootView: View {
     
