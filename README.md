@@ -52,4 +52,7 @@ This App is ready for anyone to use as a base for learning from. A few fun pract
 
 - [Create an App Clip](https://developer.apple.com/app-clips/)
 - [Make some Widgets](https://developer.apple.com/documentation/widgetkit/)
+- Add a transition for when a letter is selected
+- Try to find some bugs (maybe some inputs don't give the correct remaining guesses?)
+- Redesign the UI for a macCatalyst app
 
