@@ -26,6 +26,8 @@ This app is a little project/example of how to create composable views in SwiftU
 - [x] Animations 
 - [x] Transitions 
 - [x] Heavy use of Regex and string parsing  
+- [x] iPhone supported
+- [x] iPad supported
 
 
 # How To Generate Screenshots 
@@ -43,4 +45,11 @@ This app uses fastlane and frameit for generating appstore screenshots of all si
 **Note** 
 
 Transitions need to be disabled for screenshots to work properly, otherwise the views will not be in the hierarchy for the UI automation
+
+# Enhancement Ideas/Practice Problems
+
+This App is ready for anyone to use as a base for learning from. A few fun practice ideas are
+
+- [Create an App Clip](https://developer.apple.com/app-clips/)
+- [Make some Widgets](https://developer.apple.com/documentation/widgetkit/)
 
