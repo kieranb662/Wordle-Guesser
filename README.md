@@ -1,4 +1,11 @@
-#  How To Generate Screenshots 
+# Wordle Guesser 
+
+This app is a little project/example of how to create composable views in SwiftUI. The idea was to make a tool to see all of the possible remaining words after your first few Wordle guesses. 
+
+**Intended Use** 
+
+
+# How To Generate Screenshots 
 
 This app uses fastlane and frameit for generating appstore screenshots of all sizes 
 
