@@ -2,6 +2,8 @@
 
 This app is a little project/example of how to create composable views in SwiftUI. The idea was to make a tool to see all of the possible remaining words after your first few Wordle guesses. Since this is a primarily English game I decided against moving text into a localizable string file.
 
+**What The App Does** 
+
 <table>
 <tr>
 <td> <img src="https://user-images.githubusercontent.com/38142562/187044630-c87ac812-1de1-4a60-902a-680226fccd8d.png"> </td>
@@ -15,12 +17,15 @@ This app is a little project/example of how to create composable views in SwiftU
 <tr>
 </table>
 
-**Intended Use** 
-
 
 **Technical Stuff** 
 
-
+- [x] light/dark mode support
+- [x] Automated screen shotting
+- [x] Haptics 
+- [x] Animations 
+- [x] Transitions 
+- [x] Heavy use of Regex and string parsing  
 
 
 # How To Generate Screenshots 
@@ -34,4 +39,8 @@ This app uses fastlane and frameit for generating appstore screenshots of all si
 - optionally run `bundle exec fastlane frameit download_frames` to download the needed frames
 - run `bundle exec fastlane frameit `
 - check the `screenshots/en_us` folder for the framed screeshots
+
+**Note** 
+
+Transitions need to be disabled for screenshots to work properly, otherwise the views will not be in the hierarchy for the UI automation
 
