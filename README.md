@@ -1,6 +1,6 @@
 # Wordle Guesser 
 
-This app is a little project/example of how to create composable views in SwiftUI. The idea was to make a tool to see all of the possible remaining words after your first few Wordle guesses. Since this is a primarily English game I decided against moving text into a localizable string file.
+This app is a little project/example of how to create composable views in [SwiftUI](https://developer.apple.com/documentation/swiftui/). The idea was to make a tool to see all of the possible remaining words after your first few [Wordle](https://www.nytimes.com/games/wordle/index.html) guesses.
 
 **What The App Does** 
 
@@ -20,7 +20,19 @@ This app is a little project/example of how to create composable views in SwiftU
 
 **Technical Stuff** 
 
-The app does not really have an architecture. I treat the `Game` object as the viewmodel 
+The app does not really have an architecture. I treat the `Game` object as the viewmodel, fully embracing the use of SwiftUI's built in `@EnvironmentObject` for managing the state of the application. 
+
+For styling the app, I put most everything in the `Style.swift` file. The commonly used values are generally added as an extension of the type they represent for example:
+
+```swift 
+extension Color {
+  static let correctLetterBackground = Color("correct-letter-background")
+}
+```
+
+Since this is a primarily English game I decided against moving text into a localizable string file.
+
+**Features**
 
 - [x] light/dark mode support
 - [x] Automated screen shotting
@@ -30,7 +42,6 @@ The app does not really have an architecture. I treat the `Game` object as the v
 - [x] Heavy use of Regex and string parsing  
 - [x] iPhone supported
 - [x] iPad supported
-
 
 # How To Generate Screenshots 
 
