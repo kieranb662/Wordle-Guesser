@@ -1,8 +1,14 @@
 # Wordle Guesser 
 
-This app is a little project/example of how to create composable views in SwiftUI. The idea was to make a tool to see all of the possible remaining words after your first few Wordle guesses. 
+This app is a little project/example of how to create composable views in SwiftUI. The idea was to make a tool to see all of the possible remaining words after your first few Wordle guesses. Since this is a primarily English game I decided against moving text into a localizable string file.
 
 **Intended Use** 
+
+
+
+**Technical Stuff** 
+
+
 
 
 # How To Generate Screenshots 
