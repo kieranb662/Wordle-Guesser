@@ -36,9 +36,6 @@ struct RootView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-//        RootView()
-//            .environmentObject(Game.firstGuessFilledButNotSubmitted)
-        
         Canvas(models: [Game(), .noGuessesOneLetterSelected], deviceSize: .iPhone12Pro)
         Canvas(models: [.firstGuessFilledButNotSubmitted, .oneGuess], deviceSize: .iPhone12Pro)
     }
