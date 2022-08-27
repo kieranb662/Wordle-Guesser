@@ -20,6 +20,8 @@ This app is a little project/example of how to create composable views in SwiftU
 
 **Technical Stuff** 
 
+The app does not really have an architecture. I treat the `Game` object as the viewmodel 
+
 - [x] light/dark mode support
 - [x] Automated screen shotting
 - [x] Haptics 
@@ -57,3 +59,4 @@ This App is ready for anyone to use as a base for learning from. A few fun pract
 - Redesign the UI for a macCatalyst app
 - Add in a way to display the definitions of a tapped word
 - Make you inputs persist using coredata or firestore to keep track of all your guesses and games.
+- Make the app Localizable.
