@@ -55,4 +55,5 @@ This App is ready for anyone to use as a base for learning from. A few fun pract
 - Add a transition for when a letter is selected
 - Try to find some bugs (maybe some inputs don't give the correct remaining guesses?)
 - Redesign the UI for a macCatalyst app
-
+- Add in a way to display the definitions of a tapped word
+- Make you inputs persist using coredata or firestore to keep track of all your guesses and games.
